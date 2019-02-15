@@ -1,8 +1,8 @@
 body {
-background-color:rgb(39, 101, 138);
+background-color: #cbcccf;
 
 }
-Ul>li {
-color: #00ff00;
+Ul li {
+/* color: #; */
 list-style: none;
 }
