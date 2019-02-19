@@ -57,6 +57,8 @@
   font-size: 14px;
   color: #b4ad9e;
   font-weight: 300;
+  font-family: sans-serif;
+  text-transform: uppercase
 }
 .title {
   width: 420px;
