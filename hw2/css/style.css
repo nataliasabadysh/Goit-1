@@ -7,7 +7,7 @@
 .wrapper {
   width: 900px;
   margin: auto;
-  background-color: ghostwhite;
+  /* background-color: ghostwhite; */
 }
 
 .menu {
@@ -47,4 +47,29 @@
 }
 .box:nth-child(2n) {
   margin-left: -5px;
+}
+.box-img {
+  padding-bottom: 30px;
+}
+.suptitle {
+  width: 408px;
+  height: 25px;
+  font-size: 14px;
+  color: #b4ad9e;
+  font-weight: 300;
+}
+.title {
+  width: 420px;
+  height: 95px;
+  font-size: 30px;
+  color: #626262;
+  font-weight: 400;
+}
+.text {
+  width: 420px;
+  height: 78px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #626262;
+  font-weight: 400;
 }
