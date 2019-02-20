@@ -40,16 +40,16 @@
   display: inline-block;
   width: 420px;
   height: 480px;
-  padding-bottom: 130px;
+  margin-bottom: 130px;
 }
 .box:nth-child(2n-1) {
-  padding-right: 60px;
+  margin-right: 60px;
 }
 .box:nth-child(2n) {
   margin-left: -5px;
 }
 .box-img {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .suptitle {
   width: 408px;
