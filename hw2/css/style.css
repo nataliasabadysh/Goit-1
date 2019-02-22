@@ -5,22 +5,21 @@
 }
 
 .wrapper {
+  padding-top: 30px;
   width: 900px;
   margin: auto;
   /* background-color: ghostwhite; */
 }
 
 .menu {
-  display: block;
+  font-size: 0;
+  text-align: center;
   list-style: none;
-  width: 600px;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 100px;
-}
+  margin-bottom: 60px;
+  }
 .menu-item {
+  font-size: 14px;
   display: inline-block;
-  margin-left: -4px;
 }
 .menu-item-link {
   display: block;
@@ -28,7 +27,6 @@
   width: 150px;
   font-family: serif;
   text-transform: uppercase;
-  text-align: center;
   color: #ababab;
 }
 
@@ -74,4 +72,17 @@
   line-height: 24px;
   color: #626262;
   font-weight: 400;
+}
+
+.load_btn {
+  width: 164px;
+  height: 60px;
+  background-color: #fff;
+  border: 1px solid #626262;
+  display: block;
+  cursor: pointer;
+  margin: auto;
+  font-size: 20px;
+  color: #626262;
+  margin-bottom: 30px;
 }
