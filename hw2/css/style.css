@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  padding-top: 30px;
+  padding-top: 75px;
   width: 900px;
   margin: auto;
   /* background-color: ghostwhite; */
@@ -15,7 +15,8 @@
   font-size: 0;
   text-align: center;
   list-style: none;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+  
 }
 .menu-item {
   font-size: 14px;
@@ -27,7 +28,7 @@
   width: 150px;
   font-family: serif;
   text-transform: uppercase;
-  color: #ababab;
+  color: #626262;
 }
 
 .menu-item-link:hover {
@@ -84,5 +85,5 @@
   margin: auto;
   font-size: 20px;
   color: #626262;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
