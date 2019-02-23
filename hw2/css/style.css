@@ -1,28 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 0;
   font-family: "Playfair Display", serif;
 }
-
 .wrapper {
   padding-top: 75px;
   width: 900px;
   margin: auto;
-  /* background-color: ghostwhite; */
+  font-size: 14px;
 }
-
 .menu {
-  font-size: 0;
   text-align: center;
   list-style: none;
   margin-bottom: 100px;
-  
 }
 .menu-item {
-  font-size: 14px;
   display: inline-block;
 }
 .menu-item-link {
+  font-size: 14px;
   display: block;
   text-decoration: none;
   width: 150px;
@@ -30,22 +27,16 @@
   text-transform: uppercase;
   color: #626262;
 }
-
 .menu-item-link:hover {
   color: aqua;
 }
-
 .box {
   display: inline-block;
   width: 420px;
-  height: 480px;
   margin-bottom: 130px;
 }
 .box:nth-child(2n-1) {
   margin-right: 60px;
-}
-.box:nth-child(2n) {
-  margin-left: -5px;
 }
 .box-img {
   margin-bottom: 30px;
@@ -74,7 +65,6 @@
   color: #626262;
   font-weight: 400;
 }
-
 .load_btn {
   width: 164px;
   height: 60px;
