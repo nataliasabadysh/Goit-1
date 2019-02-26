@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 1170px;
+  padding: 35px 15px 35px 15px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-bottom: 103px;
+}
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.logo::first-letter {
+  color: #1abc9c;
+  font-weight: bold;
+}
+.menu {
+  display: inline-block;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+  margin-left: 565px;
+}
+
+.menu-item {
+  display: inline-block;
+}
+.menu-link {
+  padding: 0 16px;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+.menu-item:hover .menu-link {
+  color: #1abc9c;
+}
+/* .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+}
+.title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 90px;
+  width: 160px;
+  height: 7px;
+  background-color: aqua;
+}
+
+.gallery {
+  /* display: inline-block; */
+}
+.card {
+  display: inline-block;
+  margin: 0 15px 0 15px;
+  font-size: 0;
+  width: 255px;
+}
+.card-img {
+  
+  max-height: 282px;
+}
+
+.card-discription {
+/* vertical-align: middle; */
+margin-bottom: 30px;
+} 
+
+
+.card-name {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+
+  color: #fff;
+  background-color: #323232;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 40px;
+  
+
+}
+.card-cost {
+  display: inline-block;
+  width: 55px;
+  height: 40px;
+  color: #fff;
+  background-color: #8c8c8c;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-align: center;
+  
+}
