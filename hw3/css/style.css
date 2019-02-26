@@ -81,29 +81,25 @@ nav {
   width: 255px;
 }
 .card-img {
-  
   max-height: 282px;
 }
 
 .card-discription {
-/* vertical-align: middle; */
-margin-bottom: 30px;
-} 
-
+  /* vertical-align: middle; */
+  margin-bottom: 30px;
+}
 
 .card-name {
   display: inline-block;
   width: 200px;
   height: 40px;
-
+  padding-left: 14px;
   color: #fff;
   background-color: #323232;
-
+  box-sizing: border-box;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 40px;
-  
-
 }
 .card-cost {
   display: inline-block;
@@ -115,5 +111,4 @@ margin-bottom: 30px;
   text-transform: uppercase;
   line-height: 40px;
   text-align: center;
-  
 }
