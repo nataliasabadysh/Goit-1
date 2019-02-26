@@ -80,6 +80,16 @@ nav {
   font-size: 0;
   width: 255px;
 }
+
+.card:hover .card-name {
+  background-color: #1abc9c;
+}
+.card:hover .card-cost {
+  background-color: #7fd9c7;
+}
+.card:nth-last-child(-n + 4) {
+  margin-bottom: 105px;
+}
 .card-img {
   max-height: 282px;
 }
@@ -111,4 +121,52 @@ nav {
   text-transform: uppercase;
   line-height: 40px;
   text-align: center;
+}
+
+.blog-box {
+  display: inline-block;
+  width: 350px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.blog-img {
+  margin-bottom: 15px;
+}
+.subtitle {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: rgb(85, 82, 82);
+}
+
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 135px;
+  height: 3px;
+  background-color: aqua;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.description {
+  display: block;
+  font-size: 14px;
+  /* font-family: "OpenSans"; */
+  color: rgb(85, 82, 82);
+  line-height: 1.857;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+.blog-link {
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: rgb(78, 198, 171);
+  display: block;
+  width: 160px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
 }
