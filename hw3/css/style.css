@@ -12,9 +12,11 @@
 }
 
 nav {
-  margin-bottom: 103px;
+  margin-bottom: 110px;
 }
 .logo {
+  margin-left: 15px;
+
   display: inline-block;
   vertical-align: middle;
   font-size: 30px;
@@ -33,7 +35,10 @@ nav {
   font-size: 0;
   text-align: center;
   list-style: none;
-  margin-left: 565px;
+ 
+  margin-left: 545px;
+  font-family: 'Open Sans', sans-serif;
+  
 }
 
 .menu-item {
@@ -41,7 +46,7 @@ nav {
 }
 .menu-link {
   padding: 0 16px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -57,6 +62,11 @@ nav {
 } */
 
 .title {
+  font-family: "Roboto";
+  letter-spacing: -1px;
+  font-weight: 900;
+  line-height: 32px;
+  font-size: 48px;
   text-align: center;
   margin: 0 auto;
 }
