@@ -4,7 +4,11 @@
 
   font-family: "Roboto", sans-serif;
 }
-
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .wrapper {
   width: 1170px;
   padding: 35px 15px 35px 15px;
@@ -16,9 +20,7 @@ nav {
 }
 .logo {
   margin-left: 15px;
-
-  display: inline-block;
-  vertical-align: middle;
+  float: left;
   font-size: 30px;
   text-transform: uppercase;
   color: black;
@@ -31,18 +33,14 @@ nav {
   font-weight: bold;
 }
 .menu {
-  display: inline-block;
-  font-size: 0;
-  text-align: center;
+  margin-top: calc((37px - 19px) / 2);
+  float: right;
   list-style: none;
- 
-  margin-left: 545px;
-  font-family: 'Open Sans', sans-serif;
-  
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu-item {
-  display: inline-block;
+  float: left;
 }
 .menu-link {
   padding: 0 16px;
@@ -55,17 +53,12 @@ nav {
 .menu-item:hover .menu-link {
   color: #1abc9c;
 }
-/* .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-} */
 
 .title {
   font-family: "Roboto";
   letter-spacing: -1px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 37px;
   font-size: 48px;
   text-align: center;
   margin: 0 auto;
@@ -81,13 +74,11 @@ nav {
   background-color: aqua;
 }
 
-.gallery {
-  /* display: inline-block; */
-}
+/* card */
 .card {
-  display: inline-block;
-  margin: 0 15px 0 15px;
-  font-size: 0;
+  float: left;
+  margin: 0 15px;
+  margin-bottom: 30px;
   width: 255px;
 }
 
@@ -101,16 +92,18 @@ nav {
   margin-bottom: 105px;
 }
 .card-img {
+  float: left;
   max-height: 282px;
 }
 
 .card-discription {
-  /* vertical-align: middle; */
-  margin-bottom: 30px;
+  list-style: none;
+}
+.card-item {
+  float: left;
 }
 
 .card-name {
-  display: inline-block;
   width: 200px;
   height: 40px;
   padding-left: 14px;
@@ -132,9 +125,9 @@ nav {
   line-height: 40px;
   text-align: center;
 }
-
+/* /card */
 .blog-box {
-  display: inline-block;
+  float: left;
   width: 350px;
   margin-left: 15px;
   margin-right: 15px;
@@ -160,13 +153,11 @@ nav {
 }
 
 .description {
-  display: block;
   font-size: 14px;
-  /* font-family: "OpenSans"; */
   color: rgb(85, 82, 82);
-  line-height: 1.857;
+  line-height: 26px;
   text-align: justify;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .blog-link {
