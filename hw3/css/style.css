@@ -33,7 +33,7 @@ nav {
   font-weight: bold;
 }
 .menu {
-  margin-top: calc((37px - 19px) / 2);
+  margin-top: 9px;
   float: right;
   list-style: none;
   font-family: "Open Sans", sans-serif;
@@ -92,8 +92,8 @@ nav {
   margin-bottom: 105px;
 }
 .card-img {
-  float: left;
   max-height: 282px;
+  overflow: hidden;
 }
 
 .card-discription {
