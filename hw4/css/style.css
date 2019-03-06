@@ -2,43 +2,131 @@
   padding: 0;
   margin: 0;
 }
+
+:root {
+  --s: 104px;
+}
 .wrapper {
-    padding-top: 38px;
+  padding-top: 38px;
 }
 .clearfix {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
-header {
-    width: 1170px;
-    margin: auto;
-    padding: 30px 15px;
+.header-wrp {
+  width: 1170px;
+  height: 98px;
+  margin: auto;
+  padding-top: 30px;
+  padding: 0 15px;
 }
 
 .logo {
-    float: left;
-}
-.logo-text {
+  float: left;
+  color: black;
   font-size: 30px;
   font-family: "Roboto";
   text-transform: uppercase;
   line-height: 1.067;
   position: absolute;
   text-decoration: none;
-  
+  margin: 30px 0;
+  padding: 0 15px;
 }
-.logo-text::first-letter{
-
-    color: rgb(26, 188, 156);
+.logo::first-letter {
+  color: rgb(26, 188, 156);
 }
 
 .menu {
-    float: right;
-    list-style: none;
+  float: right;
+  list-style: none;
+  margin: 40px 0;
+  padding: 0 15px;
 }
-.menu-item{
-    float: left;
-    padding: 0 15px;
+.menu-item {
+  float: left;
+}
+
+.menu-link {
+  padding: 0 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+
+.menu-link:hover {
+  color: rgb(26, 188, 156);
+}
+.slider-img {
+  /* margin: auto;
+  display: block; */
+  height: 600px;
+  width: 100%;
+  z-index: 1;
+}
+.slider-wrp {
+  position: relative;
+  height: 600px;
+}
+
+.slider {
+  width: 1170px;
+  margin: auto;
+  height: 110px;;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.btn {
+  width: var(--s);
+  height: var(--s);
+  background-color: rgb(26, 188, 156);
+  opacity: 0.45;
+  position: relative;
+}
+
+.btn-left {
+  float: left;
+  z-index: 10;
+}
+.btn-right{
+    float:right;
+   
+    z-index: 10;
+}
+.btn:hover {
+    opacity: 1;
+}
+
+.arrow{
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%);
+    position: absolute;
+}
+.arrow-left{
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    /* transform: rotate(45deg); */
+    position: absolute;
+}
+
+.arrow-right{
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+
+    /* transform: rotate(45deg); */
+
 }
