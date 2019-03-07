@@ -95,38 +95,32 @@
   z-index: 10;
 }
 .btn-right{
-    float:right;
-   
-    z-index: 10;
+  float:right;
+  
+  z-index: 10;
 }
 .btn:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .arrow{
-    top: 50%;
-    left: 50%;
-
-    transform: translateX(-50%);
+  top: 36px;
+  left: 43px;
+  
+  /* transform: translate(-50%, -50%); */
     position: absolute;
+    /* background-color: grey; */
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
 }
 .arrow-left{
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    border-bottom: 3px solid white;
-    border-left: 3px solid white;
-    /* transform: rotate(45deg); */
-    position: absolute;
-}
-
-.arrow-right{
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    border-bottom: 3px solid white;
-    border-left: 3px solid white;
-
-    /* transform: rotate(45deg); */
+    transform: rotate(45deg);
+  }
+  
+  .arrow-right{
+    transform: rotate(45deg);
 
 }
