@@ -41,7 +41,7 @@
 .menu {
   float: right;
   list-style: none;
-  margin: 40px 0;
+  margin: 40px 15px;
   padding: 0 15px;
 }
 .menu-item {
@@ -59,17 +59,22 @@
 .menu-link:hover {
   color: rgb(26, 188, 156);
 }
+
+.conteiner-fluid {
+  min-width: 1170px;
+}
 .slider-img {
   /* margin: auto;
   display: block; */
   height: 600px;
+  min-width: 1170px;
   width: 100%;
   z-index: 1;
 }
 .slider-wrp {
   position: relative;
   height: 600px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .slider {
@@ -142,10 +147,17 @@
   opacity: 0.45;
 }
 
+.conteiner-fluid-down{
+  background-color: #e9f0fd;
+  padding-top: 100px;
+  min-width: 1170px;
+}
+
 .list-card{
   margin: auto;
   padding: 0 15px;
   width: 1170px;
+  box-sizing: border-box;
 }
 .title {
   text-align: center;
@@ -164,5 +176,83 @@
   width: 160px;
   height: 7px;
   background-color: aqua;
+}
+.card {
+  float: left;
+  margin: 0 15px;
+  width: 255px;
+}
+.card-img {
+height: 282px;
+overflow: hidden;
+position: relative;
+}
+
+.card-item{
+  float: left;
+  line-height: 40px;
+  color: white;
+}
+
+.card-name{
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: #323232;
+  width: 201px;
+  padding-left: 15px;
+}
+
+.card-coin {
+  background-color: #8c8c8c;
+  width: 54px;
+  text-align: center;
+}
+
+.hover-box{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.45;
+  background-color: black;
+  border: 11px white solid;
+  paddin/g: 3px;
+  padding-top: 79px;
+}
+.card:hover .hover-box {
+  display: block;
+}
+.card:hover .card-name{
+  background-color: #1abc9c;
+}
+.card:hover .card-coin{
+  background-color: #7fd9c7;
+}
+
+.card-icon-block {
+  margin: auto;
+  width: 166px;
+}
+
+.card-icon{
+  float: left;
+  border: 1px white solid;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  box-sizing: border-box;
+  /* margin: 0 5px; */
+
+}
+.card-icon-img{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%)
+}
+.card-repost {
+  margin: 0 7px;
 }
 
