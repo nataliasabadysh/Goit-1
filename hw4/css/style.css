@@ -215,7 +215,7 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.45);
-  border: 11px white solid;
+  border: 11px hsla(0, 0%, 100%, 0.795) solid;
   padding-top: 79px;
   z-index: 10;
 }
