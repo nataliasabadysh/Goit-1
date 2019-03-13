@@ -1,0 +1,68 @@
+:root {
+  --col: 80px;
+  --gap: 20px;
+  --cl: calc(var(--col) + var(--gap));
+}
+
+.cl-1 {
+  width: var(--cl);
+}
+
+.cl-2 {
+  width: calc(var(--cl) * 2);
+}
+.cl-3 {
+  width: calc(var(--cl) * 3);
+}
+.cl-4 {
+  width: calc(var(--cl) * 4);
+}
+.cl-5 {
+  width: calc(var(--cl) * 5);
+}
+.cl-6 {
+  width: calc(var(--cl) * 6);
+}
+.cl-7 {
+  width: calc(var(--cl) * 7);
+}
+.cl-8 {
+  width: calc(var(--cl) * 8);
+}
+.cl-9 {
+  width: calc(var(--cl) * 9);
+}
+.cl-10 {
+  width: calc(var(--cl) * 10);
+}
+.cl-11 {
+  width: calc(var(--cl) * 11);
+}
+.cl-12 {
+  width: calc(var(--cl) * 12);
+}
+
+.wrapper {
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.menu-item{
+    justify-content: baseline;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-link:last-of-type {
+    padding-left: 30px;
+}
+.menu-link {
+    padding: 0 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
