@@ -47,11 +47,11 @@
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content:  space-between ;
   
 }
 .menu-item{
-    justify-content: baseline;
+    /* justify-content: baseline; */
 }
 .menu {
   display: flex;
