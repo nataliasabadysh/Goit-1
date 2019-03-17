@@ -49,9 +49,9 @@
 .wrapper {
   margin: auto;
   padding-top: 29px;
+ 
 }
 .header {
-  /* height: 40px; */
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -71,11 +71,9 @@
   text-transform: uppercase;
   color: #95e1d3;
   padding-bottom: 12px;
-
 }
 .menu-item:last-of-type {
   padding-right: 0;
-  
 }
 
 .menu-link::after {
@@ -94,21 +92,196 @@
 .menu-item:hover .menu-link {
   color: #f38181;
 }
-.menu-item:hover .menu-link::after {
+.menu-link:hover::after {
   width: 100%;
 }
 .subtitle {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   font-size: 24px;
   text-align: center;
   line-height: 1;
-  margin-bottom: 24px; 
+  margin-bottom: 24px;
 }
-.title{
+.title {
   line-height: 1;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
 }
+
+.title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  margin: auto;
+  margin-top: 43px;
+  margin-bottom: 66px;
+  background-color: #f38181;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-img {
+  width: var(--col);
+  text-align: center;
+  flex-basis: var(--col);
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.card-discription {
+  font-size: 15px;
+  font-family: "Roboto";
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+.card:nth-of-type(n-6) {
+  margin-bottom: 50px;
+}
+
+.discription {
+  text-align: center;
+  margin: auto;
+  color: #999;
+  margin-bottom: 83px;
+}
+.poster-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;;
+}
+.poster-wrp {
+  position: relative;
+  background-color: #95e1d3;
+  margin-bottom: 31px;
+}
+
+.card-poster-img {
+  height: 470px;
+  overflow: hidden;
+}
+
+.poster-wrp:hover .card-poster-img {
+  transform: translate(-10px, -10px);
+  transition: all 0.2s linear;
+}
+
+.list-repost {
+  opacity: 0;
+  background-image: linear-gradient(hsla(0, 83%, 73%, 0.9), hsl(46, 78%, 74%, 0.9));
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.poster-wrp:hover .list-repost {
+  opacity: 1;
+}
+
+.repost-btn {
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: #fce38a;
+  margin: 0 1px;
+}
+.repost-btn:hover {
+  background-color: #95e1d3;
+}
+
+.poster-avtor{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 31px;
+  }
+  
+  .poster-work{
+    line-height: 1;
+    font-family: "Montserrat";
+    color: #acacac;
+    text-align: center;
+    
+  } 
+   
+  form {
+    font-size: 0;
+    vertical-align: middle;
+  }
+  
+  input {
+    font-size: 16px;
+    border: none;
+    box-shadow: none;
+    vertical-align: middle;
+  }
+  
+  input[type="email"] {
+    width: 230px;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+    border-right: none;
+    box-sizing: border-box;
+    padding-left: 1rem;
+  }
+  
+  input[type="submit"] {
+    width: 152px;
+    height: 40px;
+    background-color: #95e1d3;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  input::placeholder {
+    color: #e7e7e7;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 15px;
+  } 
+  
+  footer{
+    border-top: 1px solid #e5e5e5;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span{
+    color: #f38181;
+  }
