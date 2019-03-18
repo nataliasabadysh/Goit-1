@@ -49,7 +49,6 @@
 .wrapper {
   margin: auto;
   padding-top: 29px;
- 
 }
 .header {
   display: flex;
@@ -170,7 +169,7 @@
 .poster-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 85px;;
+  margin-bottom: 85px;
 }
 .poster-wrp {
   position: relative;
@@ -181,16 +180,19 @@
 .card-poster-img {
   height: 470px;
   overflow: hidden;
+  transition: all 0.2s linear;
 }
 
 .poster-wrp:hover .card-poster-img {
   transform: translate(-10px, -10px);
-  transition: all 0.2s linear;
 }
 
 .list-repost {
   opacity: 0;
-  background-image: linear-gradient(hsla(0, 83%, 73%, 0.9), hsl(46, 78%, 74%, 0.9));
+  background-image: linear-gradient(
+    hsla(0, 83%, 73%, 0.9),
+    hsl(46, 78%, 74%, 0.9)
+  );
   position: absolute;
   left: 0;
   right: 0;
@@ -216,72 +218,93 @@
   background-color: #95e1d3;
 }
 
-.poster-avtor{
-    font-size: 14px;
-    font-family: "Montserrat";
-    color: rgb(51, 51, 51);
-    text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 31px;
-  }
-  
-  .poster-work{
-    line-height: 1;
-    font-family: "Montserrat";
-    color: #acacac;
-    text-align: center;
-    
-  } 
-   
-  form {
-    font-size: 0;
-    vertical-align: middle;
-  }
-  
-  input {
-    font-size: 16px;
-    border: none;
-    box-shadow: none;
-    vertical-align: middle;
-  }
-  
-  input[type="email"] {
-    width: 230px;
-    height: 40px;
-    border: 1px solid #e7e7e7;
-    border-right: none;
-    box-sizing: border-box;
-    padding-left: 1rem;
-  }
-  
-  input[type="submit"] {
-    width: 152px;
-    height: 40px;
-    background-color: #95e1d3;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Montserrat", serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  input::placeholder {
-    color: #e7e7e7;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-size: 15px;
-  } 
-  
-  footer{
-    border-top: 1px solid #e5e5e5;
-    height: 63px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px);
   }
 
-  footer span{
-    color: #f38181;
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
   }
+
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.repost-btn:focus {
+  animation-duration: 0.75s;
+  backface-visibility: visible !important;
+  animation-name: flipOutY;
+}
+
+.poster-avtor {
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.poster-work {
+  line-height: 1;
+  font-family: "Montserrat";
+  color: #acacac;
+  text-align: center;
+}
+
+form {
+  font-size: 0;
+  vertical-align: middle;
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+input[type="email"] {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  border-right: none;
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+
+input[type="submit"] {
+  width: 152px;
+  height: 40px;
+  background-color: #95e1d3;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #e7e7e7;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  color: #f38181;
+}
