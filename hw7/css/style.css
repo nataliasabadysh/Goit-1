@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+
+
 .wrp {
   padding-top: 20px;
   width: 940px;
@@ -25,6 +27,7 @@ header {
 .menu-link {
   font-family: "Montserrat", sans-serif;
   padding: 0 20px;
+  font-size: 14px;
   text-decoration: none;
   color: #222;
   text-transform: uppercase;
@@ -52,12 +55,14 @@ header {
   font-style: italic;
   color: #777;
   line-height: 1;
+  font-family: "Droid_Serif";
   margin-bottom: 80px;
 }
 
 .sevices-box {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 120px;
 }
 .card {
   display: flex;
@@ -75,3 +80,30 @@ header {
   border-radius: 50%;
   margin-bottom: 28px;
 }
+
+.card-title{
+  font-family: "Montserrat";
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 18px;
+}
+
+.card-text{
+  text-align: center;
+  font-family: "Roboto Slab";
+font-size: 14px;
+}
+
+.contact-wrp{
+  padding-top: 120px;
+  background-color: #222;
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.contact-box{
+  width: 940px;
+  margin: auto;
+}
+
