@@ -48,6 +48,10 @@ header {
   margin-bottom: 19px;
 }
 
+.contact-box .title {
+  color: #fff;
+}
+
 .subtitle {
   text-align: center;
   font-style: italic;
@@ -98,21 +102,20 @@ header {
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: bottom;
 }
 
 .contact-box {
   width: 940px;
   margin: auto;
+  padding-bottom: 120px;
 }
 .massage-box {
   display: flex;
   justify-content: space-between;
-  /* flex-grow: ; */
-  /* flex-wrap: wrap; */
 }
 
 .push {
-  /* flex-basis: 455px; */
   width: 455px;
   height: 50px;
   border: 1px solid #cccccc;
@@ -122,7 +125,7 @@ header {
   padding-left: 20px;
   box-sizing: border-box;
 }
-
+.massage::placeholder,
 .push::placeholder {
   color: #bbbbbb;
   font-family: Montserrat;
@@ -131,11 +134,11 @@ header {
   text-transform: uppercase;
 }
 
-
-
-.message {
+.massage {
+  padding: 20px;
   width: 455px;
   height: 210px;
+  box-sizing: border-box;
 }
 
 .send {
@@ -152,54 +155,28 @@ header {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: transform .2s ;
+  transition: transform 0.2s;
 
-cursor: pointer;
-
+  cursor: pointer;
 }
-
-.send:hover{
-  /* background-color: hsl(46, 99%, 50%); */
-  transform: scale(1.05)
-}
-
-.send:active{
-  transform: scale(1)
-}
-
-
-/* 
-.push:focus:valid{
-  outline-color: green;
-}
-input[type="email"]:focus:invalid{
-  translate: outline-color 0.1s ;
-  outline-color: red;
-
-} */
-
-input[type="email"]:focus:invalid,
-
-textarea[name="body"]:focus:invalid,
-
+input[name="email"]:focus:invalid,
+textarea[name="message"]:focus:invalid,
 input[name="name"]:focus:invalid {
-
- outline-color: red;
-
- transition: outline-color 5s;
-
+  outline: 2px solid red;
+  transition: outline-color 0.4s;
 }
 
-
-
-input[type="email"]:focus:valid,
-
-textarea[name="body"]:focus:valid,
-
+input[name="email"]:focus:valid,
+textarea[name="message"]:focus:valid,
 input[name="name"]:focus:valid {
+  outline: 2px solid green;
+  transition: outline-color 0.4s;
+}
 
- outline-color: green;
+.send:hover {
+  transform: scale(1.05);
+}
 
- transition: outline-color .4s;
-
+.send:active {
+  transform: scale(1);
 }
