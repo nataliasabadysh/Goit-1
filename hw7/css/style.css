@@ -29,6 +29,7 @@ header {
   text-decoration: none;
   color: #222;
   text-transform: uppercase;
+  transition: color 0.2s ;
 }
 .menu-item:last-of-type .menu-link {
   padding-right: 0;
@@ -102,7 +103,8 @@ header {
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-position-x: right;
-  background-position-y: bottom;
+  background-position-y: center;
+  min-width: 940px;
 }
 
 .contact-box {
