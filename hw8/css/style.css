@@ -17,6 +17,7 @@
     background: url(../img/header-bg.jpg);
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: cover;
 }
 
 
@@ -28,11 +29,26 @@
         background-repeat: no-repeat;
         background-position: top center;
         
+        background-size: cover;
     }
-            /* .header-wrp {
-                width: 748px;
-                margin: auto;
-                
-            } */
+    .header-wrp {
+        width: 748px;
+        /* margin: auto; */
+        
+    }
+    
+}
+
+@media (min-width: 1300px){
+    .conteiner-fluid--header {
+        height: 700px;
+        background: url(../img/header-bg@desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+        background-size: cover;
+    }
+
+
 
 }
