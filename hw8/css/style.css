@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+
+/* mobail */
+
+
+.header-wrp {
+    width: 320px;
+    margin: auto;
+    
+}
+.conteiner-fluid--header{
+    height: 540px;
+    background: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
+/* tablet */
+@media (min-width: 768px) {
+    .conteiner-fluid--header {
+        height: 700px;
+        background: url(../img/header-bg@tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+    }
+            /* .header-wrp {
+                width: 748px;
+                margin: auto;
+                
+            } */
+
+}
