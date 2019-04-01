@@ -128,11 +128,11 @@ header {
 }
 
 .card-link {
-  text-decoration: none;
-  color: inherit;
 }
 
 .card {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,11 +183,14 @@ header {
   /* text-align: center; */
 }
 
-@media (min-width: 748px) {
+@media (min-width: 768px) {
   .header-wrp {
+    padding-top: 50px;;
     width: 748px;
   }
-
+  .btn-box{
+    margin-bottom: 161px;
+  }
   .conteiner-fluid--header {
     height: 698px;
     background: url(../img/header-bg@tablet.jpg);
@@ -204,7 +207,7 @@ header {
     /* align-items: center; */
     /* align-content: flex; */
   }
-  .header{
+  .header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -213,11 +216,34 @@ header {
     width: 748px;
   }
 
-   .logo-name {
+  .logo-name {
     /* align-items: flex-start; */
     align-self: flex-start;
     /* order: 1; */
   }
- 
-  } 
+
+   .title--header{
+     width: 498px;
+     font-size: 51px;
+     margin-bottom: 30px;
+   }
+
+   .subtitle--header{
+     width: 405px;
+     font-size: 24px;
+     margin-bottom: 40px;
+   }
+
+
+   .title{
+     width: 405px;
+     margin-bottom: 33px;
+   }
+   .card-box{
+     width: 495px;
+     height: 550px;
+     flex-wrap: wrap;
+     margin: auto;
+   
+   }
 }
