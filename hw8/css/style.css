@@ -57,11 +57,13 @@ header {
 }
 
 .logo-name {
+  display: block;
   font-family: "Montserrat", sans-serif;
   color: white;
   /* font-size: 20px; */
   font-weight: bold;
   margin-bottom: 38px;
+  text-decoration: none;
 }
 
 .title--header {
@@ -141,6 +143,11 @@ header {
 .img-box {
   position: relative;
   margin-bottom: 20px;
+  transition: transform 0.4s;
+}
+
+.img-box:hover{
+  transform: scale(1.2)
 }
 
 .piople {
@@ -185,7 +192,7 @@ header {
 
 @media (min-width: 768px) {
   .header-wrp {
-    padding-top: 50px;;
+    padding-top: 30px;;
     width: 748px;
   }
   .btn-box{
@@ -246,4 +253,34 @@ header {
      margin: auto;
    
    }
+
+
+}
+
+
+@media (min-width: 962px){
+.header-wrp{
+  width: 940px;
+  /* background-color: #000; */
+}
+.conteiner-fluid--header {
+  height: 698px;
+  background: url(../img/header-bg@desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  padding-top: 20px;
+}
+
+.header{
+  width: 940px;
+}
+.card-box{
+  /* flex-direction: row; */
+  width: 940px;
+  height: 270px;
+  margin-bottom: 40px;
+}
+
 }
