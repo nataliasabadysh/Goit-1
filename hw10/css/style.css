@@ -1,8 +1,29 @@
-body{
-    background-color: grey;
+@import "./normalize.css";
+@import "./fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.menu_link--icon {
-    width: 18px;
-    height: 16px;
+.conteiner--fluid--header {
+  background-repeat: no-repeat;
+  height: 1000px;
+  background-position: top center;
+  background-size: cover;
+  background-image: linear-gradient(
+      hsla(0, 83%, 73%, 0.8),
+      hsl(47, 95%, 76%, 0.8)
+    ),
+    url(../img/wrp@1x.png);
+}
+
+.conteiner--wrapper{
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1ft 1ft 1ft 1ft 1ft 1ft 1ft 1ft ;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
+
 }
