@@ -18,12 +18,30 @@
     url(../img/wrp@1x.png);
 }
 
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .conteiner--fluid--header {
+    background-image: linear-gradient(
+      hsla(0, 83%, 73%, 0.8),
+      hsl(47, 95%, 76%, 0.8)
+    ),
+    url(../img/wrp@2x.png);
+  }
+}
+
+
 .conteiner--wrapper{
     width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1ft 1ft 1ft 1ft 1ft 1ft 1ft 1ft ;
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax(100px, auto);
     grid-gap: 5px;
 
+}
+.menu {
+  list-style: none;
+  display: flex;
 }
