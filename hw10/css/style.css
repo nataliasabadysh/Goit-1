@@ -1,11 +1,10 @@
 @import "./normalize.css";
-/* @import "./fonts.css"; */
+@import "./fonts.css";
 
 * {
   margin: 0;
   padding: 0;
 }
-
 
 .conteiner--fluid--header {
   min-width: 1200px;
@@ -51,7 +50,6 @@ header {
   display: flex;
 }
 
-
 .menu_link {
   padding: 0 26px;
   color: white;
@@ -65,9 +63,8 @@ header {
 }
 
 .menu-item .menu_link:hover {
-  color: #fce38a
+  color: #fce38a;
 }
-
 
 .menu_link::after {
   content: "";
@@ -82,8 +79,8 @@ header {
   transition-timing-function: ease-in-out;
   /* height: 2px; */
 }
-.menu_link:hover:after{
-  transform: rotateY(0deg)
+.menu_link:hover:after {
+  transform: rotateY(0deg);
 }
 .menu_link--icon {
   width: 18px;
@@ -91,16 +88,17 @@ header {
   fill: white;
 }
 
-.subtitle {
+.subtitle-top {
   font-size: 72px;
   text-transform: capitalize;
   text-align: center;
   color: white;
-  font-family: serif;
+  /* font-family: ; */
+  font-family: "Kaushan Script", serif;
   margin-bottom: 42px;
 }
 
-.title {
+.title-top {
   display: block;
   margin: auto;
   text-align: center;
@@ -130,4 +128,53 @@ header {
 .link--header:hover {
   border-color: hsla(0, 83%, 73%, 0.8);
   color: hsla(0, 83%, 73%, 0.8);
+}
+
+main {
+  width: 1200px;
+  margin: auto;
+  padding-top: 46px;
+}
+
+.subtitle {
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 42px;
+  margin-bottom: 66px;
+  height: 3px;
+  width: 60px;
+  background-color: #f38181;
+}
+
+.service_box {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.service_box_card{
+  width: 380px;
+  margin: 0 10px;;
+}
+
+.card_img {
+  fill: #95e1d3;
+  width: 32px;
+  height: 32px;
 }
