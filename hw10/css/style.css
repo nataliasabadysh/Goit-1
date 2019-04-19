@@ -79,9 +79,14 @@ header {
   transition-timing-function: ease-in-out;
   /* height: 2px; */
 }
-.menu_link:hover:after {
+
+
+
+.menu_link:hover::after {
   transform: rotateY(0deg);
 }
+
+
 .menu_link--icon {
   width: 18px;
   height: 18px;
@@ -129,6 +134,9 @@ header {
   border-color: hsla(0, 83%, 73%, 0.8);
   color: hsla(0, 83%, 73%, 0.8);
 }
+/* .menu_link:nth-of-type(-n+3)::after {
+  border-color: white;
+} */
 
 main {
   width: 1200px;
@@ -169,12 +177,48 @@ main {
 
 }
 .service_box_card{
+  display: flex;
   width: 380px;
-  margin: 0 10px;;
+  margin: 0 10px;
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  margin-bottom: 117px;
+  /* justify-content: center;; */
 }
 
+.service_box_card--img{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-shrink: 0;
+  /* margin: auto; */
+  justify-content: center;
+  /* align-items: flex-start; */
+}
 .card_img {
   fill: #95e1d3;
   width: 32px;
   height: 32px;
+  /* margin: auto; */
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+.service_box_card--title {
+  margin-bottom: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+.service_box_card--description{
+
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
