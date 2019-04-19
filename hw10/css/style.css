@@ -51,23 +51,26 @@ header {
 }
 
 .menu_link {
-  padding: 0 26px;
   color: white;
   /* padding: 26px; */
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Montserrat";
   font-size: 14px;
-  position: relative;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .menu-item .menu_link:hover {
   color: #fce38a;
 }
-
+.menu_item {
+  padding: 0 26px;
+  /* position: relative; */
+}
 .menu_link::after {
   content: "";
+  display: block;
   transform: rotateY(90deg);
   width: 100%;
   border-bottom: 3px solid #fce38a;
@@ -80,10 +83,18 @@ header {
   /* height: 2px; */
 }
 
+.not::after {
+  border-bottom: 0 solid #fce38a; 
+
+}
 
 
-.menu_link:hover::after {
+.menu_item:hover .menu_link::after {
   transform: rotateY(0deg);
+}
+.menu_item:hover .not::after {
+  border-bottom: 0 solid #fce38a; 
+
 }
 
 
