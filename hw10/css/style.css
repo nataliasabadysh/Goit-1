@@ -66,7 +66,6 @@ header {
 }
 .menu_item {
   padding: 0 26px;
-  /* position: relative; */
 }
 .menu_link::after {
   content: "";
@@ -80,28 +79,29 @@ header {
   transition-property: transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  /* height: 2px; */
 }
 
 .not::after {
-  border-bottom: 0 solid #fce38a; 
-
+  border: 0 solid #fce38a;
 }
-
 
 .menu_item:hover .menu_link::after {
   transform: rotateY(0deg);
+
 }
 .menu_item:hover .not::after {
-  border-bottom: 0 solid #fce38a; 
-
+  border: 0 solid #fce38a;
 }
-
+.menu_link:hover .menu_link--icon {
+  transform: scale(1.5);
+  fill:#fce38a;
+}
 
 .menu_link--icon {
   width: 18px;
   height: 18px;
   fill: white;
+  transition: all 0.2s;
 }
 
 .subtitle-top {
@@ -109,7 +109,6 @@ header {
   text-transform: capitalize;
   text-align: center;
   color: white;
-  /* font-family: ; */
   font-family: "Kaushan Script", serif;
   margin-bottom: 42px;
 }
@@ -145,10 +144,6 @@ header {
   border-color: hsla(0, 83%, 73%, 0.8);
   color: hsla(0, 83%, 73%, 0.8);
 }
-/* .menu_link:nth-of-type(-n+3)::after {
-  border-color: white;
-} */
-
 main {
   width: 1200px;
   margin: auto;
@@ -185,32 +180,25 @@ main {
 .service_box {
   display: flex;
   flex-wrap: wrap;
-
 }
-.service_box_card{
+.service_box_card {
   display: flex;
   width: 380px;
   margin: 0 10px;
-  /* justify-content: flex-start; */
-  /* align-items: flex-start; */
   margin-bottom: 117px;
-  /* justify-content: center;; */
 }
 
-.service_box_card--img{
+.service_box_card--img {
   width: 80px;
   height: 80px;
   display: flex;
   flex-shrink: 0;
-  /* margin: auto; */
   justify-content: center;
-  /* align-items: flex-start; */
 }
 .card_img {
   fill: #95e1d3;
   width: 32px;
   height: 32px;
-  /* margin: auto; */
 }
 .card-text {
   display: flex;
@@ -222,14 +210,154 @@ main {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-
 }
 
-.service_box_card--description{
-
+.service_box_card--description {
   font-size: 15px;
   line-height: 24px;
   color: #999999;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.team_description {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.poster-box {
+  padding-top: 92px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+.poster-wrp {
+  position: relative;
+  background-color: #95e1d3;
+  margin-bottom: 31px;
+}
+
+.card-poster-img {
+  height: 470px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.poster-wrp:hover .card-poster-img {
+  transform: translate(-10px, -10px);
+}
+
+.list-repost {
+  opacity: 0;
+  background-image: linear-gradient(
+    hsla(0, 83%, 73%, 0.9),
+    hsl(46, 78%, 74%, 0.9)
+  );
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.poster-wrp:hover .list-repost {
+  opacity: 1;
+}
+
+.repost-btn {
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: #fce38a;
+  margin: 0 1px;
+}
+
+.repost-btn > svg {
+  fill: hsla(0, 83%, 73%, 0.9);
+}
+.repost-btn:hover > svg {
+  fill: white;
+}
+
+.repost-btn:hover {
+  background-color: #95e1d3;
+}
+
+.poster-avtor {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.poster-work {
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  color: #acacac;
+  text-align: center;
+}
+
+footer{
+  width: 1200px;
+  margin: auto;
+}
+form {
+
+  font-size: 0;
+  vertical-align: middle;
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+input[type="email"] {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  border-right: none;
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+
+input[type="submit"] {
+  width: 152px;
+  height: 40px;
+  background-color: #95e1d3;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #e7e7e7;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  color: #f38181;
 }
