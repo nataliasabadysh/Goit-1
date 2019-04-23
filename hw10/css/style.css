@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.conteiner--fluid--header {
+.conteiner-fluid--header {
   min-width: 1200px;
   background-repeat: no-repeat;
   height: 1000px;
@@ -41,7 +41,7 @@
   only screen and (-moz-min-device-pixel-ratio: 1.5),
   only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min-device-pixel-ratio: 1.5) {
-  .conteiner--fluid--header {
+  .conteiner-fluid--header {
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -105,7 +105,7 @@ header {
   position: relative;
 }
 
-.menu__item .menu_link:hover {
+.menu__item .menu__link:hover {
   color: #fce38a;
 }
 .menu__item {
@@ -234,14 +234,14 @@ main {
   background-color: #f38181;
 }
 
-.service__box {
+.service-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.service__box__card {
+.service-box__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +250,7 @@ main {
   margin-bottom: 117px;
 }
 
-.service__box__card--img {
+.card--img {
   width: 80px;
   height: 80px;
   display: -webkit-box;
@@ -276,7 +276,7 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.service__box__card--title {
+.card__title {
   margin-bottom: 18px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -284,7 +284,7 @@ main {
   text-transform: uppercase;
 }
 
-.service__box__card--description {
+.card__description {
   font-size: 15px;
   line-height: 24px;
   color: #999999;
@@ -310,13 +310,13 @@ main {
   justify-content: space-between;
   margin-bottom: 85px;
 }
-.poster-wrp {
+.poster--wrp {
   position: relative;
   background-color: #95e1d3;
   margin-bottom: 31px;
 }
 
-.card-poster-img {
+.poster__img {
   height: 470px;
   overflow: hidden;
   -webkit-transition: all 0.2s linear;
@@ -324,7 +324,7 @@ main {
   transition: all 0.2s linear;
 }
 
-.poster-wrp:hover .card-poster-img {
+.poster--wrp:hover .poster__img {
   -webkit-transform: translate(-10px, -10px);
   -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
@@ -369,7 +369,7 @@ main {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.poster-wrp:hover .list-repost {
+.poster--wrp:hover .list-repost {
   opacity: 1;
 }
 
