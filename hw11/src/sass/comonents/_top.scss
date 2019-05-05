@@ -1,0 +1,41 @@
+.top {
+  &-subtitle {
+    text-align: center;
+    color: #fff;
+    font-family: 'Kaushan Script';
+    font-size: 72px;
+    text-transform: capitalize;
+  }
+
+  &-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 140px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-link {
+    display: block;
+    width: 160px;
+    height: 40px;
+    border: 3px solid #ffffff;
+    text-align: center;
+    line-height: 40px;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.04);
+      background-color: hsla(0, 83%, 73%, 0.6);
+    }
+  }
+}

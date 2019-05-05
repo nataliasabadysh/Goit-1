@@ -1,0 +1,78 @@
+.subtitle {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Kaushan Script', sans-serif;
+  margin-bottom: 22px;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+
+  &::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-top: 42px;
+    margin-bottom: 66px;
+  }
+}
+
+.service {
+  padding-top: 46px;
+
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__card {
+      display: flex;
+      width: 380px;
+      margin: 0 10px;
+      margin-bottom: 99px;
+      height: 80px;
+    }
+  }
+}
+
+.card {
+  &--img {
+    width: 80px;
+
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    fill: #95e1d3;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    // color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+  }
+}
