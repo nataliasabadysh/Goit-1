@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="telegram.php" method="POST">
+      <input
+        type="date"
+        name="datein"
+        id=""
+        required
+        placeholder="Дата заеазда"
+      />
+      <input
+        type="date"
+        name="dateout"
+        id=""
+        required
+        placeholder="Даты выезда"
+      />
+      <input type="number" name="phone" required placeholder="Телефон" />
+      <input
+        type="number"
+        name="man"
+        id=""
+        min="1"
+        required
+        placeholder="Количество человек"
+      />
+      <button type="submit">Отправить</button>
+    </form>
+  </body>
+</html>
