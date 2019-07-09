@@ -1,6 +1,12 @@
+label {
+  display: block;
+}
+button {
+  display: none;
+}
 @font-face {
   font-family: "ALIN_KID";
-  src: url("tf_fonts/tf_fonts/Fancy_Cartoon/ALIN_KID/en/ALIN_KID.ttf") format("truetype"); /* Modern Browsers */
+  src: url("tf_fonts/Fancy_Cartoon/ALIN_KID/en/ALIN_KID.ttf") format("truetype"); /* Modern Browsers */
 }
 @font-face {
   font-family: "BABYCAKE";
@@ -8,7 +14,7 @@
 }
 @font-face {
   font-family: "BOYZRGRO";
-  src: url("tf_fonts/Fancy_Cartoon/BOYZRGRO/en/BOYZRGRO.TTF") format("truetype");
+  src: url("tf_fonts/Fancy_Cartoon/BOYZRGRO/en/BOYZRGRO.ttf") format("truetype");
 }
 @font-face {
   font-family: "Bloodn Guts";
