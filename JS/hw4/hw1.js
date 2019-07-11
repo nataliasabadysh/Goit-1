@@ -29,6 +29,7 @@ const notepad = {
      * Возвращает: сохраненную заметку
      */
     this.notes.push(note);
+    return this.findNoteById(note.id);
   },
   deleteNote(id) {
     /*
@@ -115,6 +116,16 @@ const notepad = {
 /*
  * Добавляю 4 заметки и смотрю что получилось
  */
+// проверка
+console.log('Тест', notepad.saveNote({
+  id: 'id-3',
+  title: 'Get comfy with Frontend frameworks',
+  body:
+    'First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
+  priority: Priority.NORMAL,
+}));
+
+
 notepad.saveNote({
   id: 'id-1',
   title: 'JavaScript essentials',
