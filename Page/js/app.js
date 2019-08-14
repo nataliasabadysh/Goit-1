@@ -85,21 +85,21 @@ function color() {
     colorFont.append(el);
   }
   
-  const el = document.createElement("div");
-  el.dataset.color = "colorbg";
-  el.classList = "colorpic transparent ok";
-  el.style.backgroundColor = `#ffffff00`;
-  el.title = "Transparent";
-  colorBg.append(el);
+  // const el = document.createElement("div");
+  // el.dataset.color = "colorbg";
+  // el.classList = "colorpic transparent ok";
+  // el.style.backgroundColor = `#ffffff00`;
+  // el.title = "Transparent";
+  // colorBg.append(el);
   
-  for (let i = 0; i < COLOR.length; i += 1) {
-    const el = document.createElement("div");
-    el.classList = "colorpic ";
-    if (i === 0) el.classList.add("white");
-    el.dataset.color = "colorbg";
-    el.style.backgroundColor = `#${COLOR[i]}`;
-    colorBg.append(el);
-  }
+  // for (let i = 0; i < COLOR.length; i += 1) {
+  //   const el = document.createElement("div");
+  //   el.classList = "colorpic ";
+  //   if (i === 0) el.classList.add("white");
+  //   el.dataset.color = "colorbg";
+  //   el.style.backgroundColor = `#${COLOR[i]}`;
+  //   colorBg.append(el);
+  // }
 }
 
 // Плавный скрол
@@ -158,8 +158,8 @@ LINE.addEventListener("input", setLine);
 const COLORFN = document.querySelector(".colortext");
 COLORFN.addEventListener("click", colorFn);
 
-const COLORBG = document.querySelector(".colorbg");
-COLORBG.addEventListener("click", colorBgFn);
+// const COLORBG = document.querySelector(".colorbg");
+// COLORBG.addEventListener("click", colorBgFn);
 
 const wrp = document.querySelector(".shrift--wrp");
 // window.addEventListener("resize"
@@ -181,11 +181,35 @@ const clearConvas = function() {
 // Обнвление содержимого
 function update() {
   clearConvas();
+  // createBg();
+
+
   ctx.textAlign = "center";
   ctx.fillStyle = colorVal;
   ctx.font = `${sizeVal + "px"} ${fontsVal}`;
   ctx.fillText(lineVal, textPosition, 120);
 }
+
+// function createBg() {
+//   console.time();
+//   let newBoxColor =  document.querySelector(".colorbg .ok").style.backgroundColor;
+//   newBoxColor = newBoxColor.substring(5, newBoxColor.length-1)
+//   .replace(/ /g, '')
+//   .split(',');
+//   const newBox = ctx.createImageData(canvas.width, 200);
+//   // console.log(newBox.data.length);
+//   // console.log(newBoxColor);
+// console.log( newBox.data.length / 4);
+//   // for (let i = 0; i < newBox.data.length; i += 4) {
+//   //   newBox.data[i + 0] = newBoxColor[0];
+//   //   newBox.data[i + 1] = newBoxColor[1];
+//   //   newBox.data[i + 2] = newBoxColor[2];
+//   //   newBox.data[i + 3] = newBoxColor[3] || 255;
+//   //   console.log(newBox.data[3]);
+//   // }
+//   ctx.putImageData(newBox, 0, 0);
+//   console.timeEnd();
+// }
 
 function fontsFn({ target }) {
   if (
@@ -224,15 +248,16 @@ function fontsFn({ target }) {
       update();
     }
   }
-  // Получение цвет текста
-function colorBgFn({ target }) {
+  // Получение цвет фона
+  function colorBgFn({ target }) {
   if (target.dataset.color === "colorbg") {
     const b = document.querySelector(".colorbg .ok");
     b.classList.remove("ok");
     target.classList.add("ok");
-    canvas.style.backgroundColor = target.style.backgroundColor;
+    // ctx.fillRect(0, 0, canvas.width, 200);
+    // canvas.style.backgroundColor = target.style.backgroundColor;
     // console.log(colorVal);
-    // update();
+    update();
   }
 }
 // Получение размер
@@ -246,6 +271,13 @@ function sizeFn({ target }) {
   update();
 }
 
-
+function download() {
+  var download = document.getElementById("download");
+  var image = document
+    .getElementById("canvas")
+    .toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+  download.setAttribute("href", image);
+}
 
 update();

@@ -26,7 +26,7 @@ body {
   background-color: #fff;
   /* background-image: -webkit-linear-gradient(top, #b6b4b4 0%, #fff 100%); */
   /* background-image: -webkit-linear-gradient(bottom,#dbdbdb  0%,  #868686 100%); */
-  background-image: -webkit-linear-gradient(bottom,#1B1B1B  0%,  #1B1B1B 100%);
+  background-image: -webkit-linear-gradient(bottom, #1b1b1b 0%, #1b1b1b 100%);
 }
 .section--wrp {
   position: relative;
@@ -55,7 +55,6 @@ body {
 .colorbefore::before {
   left: -50px;
   content: "3";
-
 }
 
 .input::before {
@@ -82,7 +81,7 @@ body {
 .podskazka {
   font-style: italic;
   color: #868686;
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
 .main {
@@ -130,7 +129,7 @@ body {
   margin-bottom: 20px;
   border-radius: 25px;
   background-color: #fff;
-  background-image: -webkit-linear-gradient(top, #1B1B1B 0%, #1B1B1B 100%);
+  background-image: -webkit-linear-gradient(top, #1b1b1b 0%, #1b1b1b 100%);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 20;
@@ -205,7 +204,7 @@ body {
 .result--box {
   padding: 20px;
   min-height: 200px;
-  background: #1B1B1B;
+  background: #1b1b1b;
   /* background-image: -webkit-linear-gradient(top, #fff 0%, #cfcfcf 100%); */
   /* box-shadow: inset 0px 0px 10px #333; */
   border-bottom-left-radius: 20px;
@@ -245,7 +244,6 @@ body {
   height: 22px;
 }
 
-
 .corect-text .title img {
   width: 20px;
 }
@@ -272,13 +270,13 @@ body {
   width: 44px;
   display: inline-block;
   border: none;
-  position: absolute;
-  top: 15px;
-  right: 11px;
+  /* position: absolute; */
+  /* top: 15px; */
+  /* right: 11px; */
   background-color: #e03838;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background-image: url(../images/icon/refresh.png);
+  /* background-image: url(../images/icon/refresh.png); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -344,9 +342,6 @@ body {
   background-image: url(../images/icon/plus.png);
 }
 
-
-
-
 /* Цветт текста */
 .result--box .font-color {
   width: 49%;
@@ -373,7 +368,7 @@ body {
 }
 
 /* .font-bg .write-box { */
-  /* height: 200px;; */
+/* height: 200px;; */
 /* } */
 
 .colorpic {
@@ -405,12 +400,10 @@ body {
 
 .transparent.ok {
   background-image: url(../images/icon/transok.jpg);
-  
 }
 
 .white.ok {
   background-image: url(../images/icon/okwhite.jpg);
-
 }
 
 /* Медиа праавила */
@@ -471,4 +464,24 @@ body {
   .card {
     width: 40.7%;
   }
+}
+
+.icon-download {
+  fill: #3c763d;
+  width: 40px;
+  height: 40px;
+}
+.corect-text .write-box .download {
+  padding: 20px;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  border-radius: 2px;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  /* line-height: 40px; */
+}
+.corect-text .write-box .download span {
+/* vertical-align: middle; */
 }
