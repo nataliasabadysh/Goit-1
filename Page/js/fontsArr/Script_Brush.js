@@ -89,11 +89,11 @@ const ScriptBrush = [
     alt: "KGLifeisMessy",
     name: "KGLifeisMessy"
   },
-  {
-    src:  "images/KeepScrollingDEMO.png",
-    alt: "KeepScrollingDEMO",
-    name: "KeepScrollingDEMO"
-  },
+  // {
+  //   src:  "images/KeepScrollingDEMO.png",
+  //   alt: "KeepScrollingDEMO",
+  //   name: "KeepScrollingDEMO"
+  // },
   {
     src:  "images/LEVIBRUSH.png",
     alt: "LEVIBRUSH",
@@ -209,11 +209,11 @@ const ScriptBrush = [
     alt: "Sunshine Boulevard Personal Use",
     name: "Sunshine Boulevard Personal Use"
   },
-  {
-    src:  "images/Surfing Capital.png",
-    alt: "Surfing Capital",
-    name: "Surfing Capital"
-  },
+  // {
+  //   src:  "images/Surfing Capital.png",
+  //   alt: "Surfing Capital",
+  //   name: "Surfing Capital"
+  // },
   {
     src:  "images/Sweet Sorrow.png",
     alt: "Sweet Sorrow",

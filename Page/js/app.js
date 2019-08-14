@@ -43,9 +43,7 @@ function selectFamily({ target }) {
       createBox(ScriptBrush);
       break;
   }
-
 }
-
 
 createBox(FancyCartoon);
 
@@ -56,59 +54,198 @@ function createBox(arr) {
   for (let i = 0; i < arr.length; i++) {
     box.insertAdjacentHTML(
       "beforeend",
-      `<div data-shrift="${
+      `<a href="#canvas"><div data-shrift="${
         arr[i].name
       }" class="shrift"><svg class="icon"><use href="#bin-icon"></use></svg><img class="font_img"src="${
         arr[i].src
-      }"alt="${arr[i].alt}" title="${arr[i].name}"/></div>`
+      }"alt="${arr[i].alt}" title="${arr[i].name}"/></div></a>`
     );
   }
 }
 
-
+// delete_cookie("text");
+// delete_cookie("font");
 
 const font = document.querySelector(".box__shrift");
-font.addEventListener("click", push);
-function push({ target }) {
-  delete_cookie("text");
-  delete_cookie("font");
-  if (
-    target.nodeName === "IMG" ||
-    target.nodeName === "svg" ||
-    target.nodeName === "use"
-  ) {
-    document.cookie = `text=${document.getElementById("text").value}`;
-    const parent = target.closest('div.shrift');
-    
-    document.cookie = `font=${parent.dataset.shrift}`;
-    console.log(document.cookie);
-  }
-}
-
+font.addEventListener("click", fontsFn);
 
 color();
 function color() {
   const colorFont = document.querySelector(".colortext");
-  const colorBg  = document.querySelector(".colorbg");
+  const colorBg = document.querySelector(".colorbg");
 
-  for (let i = 0; i < COLOR.length; i +=1) {
+  for (let i = 0; i < COLOR.length; i += 1) {
     const el = document.createElement("div");
+    el.dataset.color = "color";
     el.classList = "colorpic";
+    if (i === 0) {
+      el.classList = "colorpic white ok";
+    }
     el.style.backgroundColor = `#${COLOR[i]}`;
     colorFont.append(el);
   }
-
+  
   const el = document.createElement("div");
-  el.classList = "colorpic transparent";
+  el.dataset.color = "colorbg";
+  el.classList = "colorpic transparent ok";
   el.style.backgroundColor = `#ffffff00`;
-  el.title = "Transparent"
+  el.title = "Transparent";
   colorBg.append(el);
-
-
-  for (let i = 0; i < COLOR.length; i +=1) {
+  
+  for (let i = 0; i < COLOR.length; i += 1) {
     const el = document.createElement("div");
-    el.classList = "colorpic";
+    el.classList = "colorpic ";
+    if (i === 0) el.classList.add("white");
+    el.dataset.color = "colorbg";
     el.style.backgroundColor = `#${COLOR[i]}`;
     colorBg.append(el);
   }
 }
+
+// Плавный скрол
+var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+  V = 0.2; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (var i = 0; i < linkNav.length; i++) {
+  linkNav[i].addEventListener(
+    "click",
+    function(e) {
+      //по клику на ссылку
+      e.preventDefault(); //отменяем стандартное поведение
+      var w = window.pageYOffset, // производим прокрутка прокрутка
+        hash = this.href.replace(/[^#]*(.*)/, "$1"); // к id элемента, к которому нужно перейти
+      (t = document.querySelector(hash).getBoundingClientRect().top), // отступ от окна браузера до id
+        (start = null);
+      requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+      function step(time) {
+        if (start === null) start = time;
+        var progress = time - start,
+          r =
+            t < 0
+              ? Math.max(w - progress / V, w + t)
+              : Math.min(w + progress / V, w + t);
+        window.scrollTo(0, r);
+        if (r != w + t) {
+          requestAnimationFrame(step);
+        } else {
+          location.hash = hash; // URL с хэшем
+        }
+      }
+    },
+    false
+  );
+}
+
+// Переменные для конвас
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.textBaseline = "middle";
+
+// Переменные цвет размер текст
+let colorVal = "#fff";
+let sizeVal = "40";
+let lineVal = "TATTOO inscription";
+let fontsVal = "ALIN_KID";
+let textPosition = canvas.width / 2;
+
+// Листенеры
+// Размер
+const SIZE = document.querySelector(".size .write-box");
+SIZE.addEventListener("click", sizeFn);
+
+const LINE = document.querySelector(".write");
+LINE.addEventListener("input", setLine);
+
+const COLORFN = document.querySelector(".colortext");
+COLORFN.addEventListener("click", colorFn);
+
+const COLORBG = document.querySelector(".colorbg");
+COLORBG.addEventListener("click", colorBgFn);
+
+const wrp = document.querySelector(".shrift--wrp");
+// window.addEventListener("resize"
+// document.addEventListener('resize', canvasResize);
+window.addEventListener("resize", canvasResize);
+function canvasResize() {
+  // console.log(wrp.offsetWidth - 30);
+  canvas.width = wrp.offsetWidth - 30;
+  textPosition = canvas.width / 2;
+  // console.log(textPosition);
+  update();
+}
+// Функции
+// Чистка конвас
+const clearConvas = function() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  return true;
+};
+// Обнвление содержимого
+function update() {
+  clearConvas();
+  ctx.textAlign = "center";
+  ctx.fillStyle = colorVal;
+  ctx.font = `${sizeVal + "px"} ${fontsVal}`;
+  ctx.fillText(lineVal, textPosition, 120);
+}
+
+function fontsFn({ target }) {
+  if (
+    target.nodeName === "IMG" ||
+    target.nodeName === "svg" ||
+    target.nodeName === "use"
+    ) {
+      const parent = target.closest("div.shrift");
+      console.log(parent);
+      fontsVal = parent.dataset.shrift;
+    }
+    // console.log(target);
+    if (target.className === "refresh") {
+      console.log(document.querySelector(".write").value);
+      lineVal = document.querySelector(".write").value;
+    }
+    update();
+  }
+  
+  function setLine({ target }) {
+    LINE.value = target.value.replace(/[^a-zA-Z0-9 -]/ig,'');           
+    console.log(target);
+    lineVal = target.value;
+    update();
+  }
+  
+  // Получение цвет текста
+  function colorFn({ target }) {
+    if (target.dataset.color === "color") {
+      const a = document.querySelector(".colortext .ok");
+      a.classList.remove("ok");
+      target.classList.add("ok");
+      
+      colorVal = target.style.backgroundColor;
+      console.log(colorVal);
+      update();
+    }
+  }
+  // Получение цвет текста
+function colorBgFn({ target }) {
+  if (target.dataset.color === "colorbg") {
+    const b = document.querySelector(".colorbg .ok");
+    b.classList.remove("ok");
+    target.classList.add("ok");
+    canvas.style.backgroundColor = target.style.backgroundColor;
+    // console.log(colorVal);
+    // update();
+  }
+}
+// Получение размер
+function sizeFn({ target }) {
+  if (target.dataset.size) {
+    sizeVal = target.dataset.size;
+  } else {
+    sizeVal = Number(sizeVal) + Number(target.dataset.calc);
+    console.log(false);
+  }
+  update();
+}
+
+
+
+update();

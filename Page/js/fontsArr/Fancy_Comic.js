@@ -4,11 +4,11 @@ const FancyComic = [
     alt: "al kisah",
     name: "al kisah"
   },
-  {
-    src: "images/B Prahara.png",
-    alt: "B Prahara TH_Tlsn Tgn_Bold Italic",
-    name: "B Prahara TH_Tlsn Tgn_Bold Italic"
-  },
+  // {
+  //   src: "images/B Prahara.png",
+  //   alt: "B Prahara TH_Tlsn Tgn_Bold Italic",
+  //   name: "B Prahara TH_Tlsn Tgn_Bold Italic"
+  // },
   {
     src: "images/BABIRG__.png",
     alt: "BABIRG__",
@@ -19,11 +19,11 @@ const FancyComic = [
     alt: "BADABB",
     name: "BADABB"
   },
-  {
-    src: "images/BADUY.png",
-    alt: "BADUY",
-    name: "BADUY"
-  },
+  // {
+  //   src: "images/BADUY.png",
+  //   alt: "BADUY",
+  //   name: "BADUY"
+  // },
   {
     src: "images/Black Kids.png",
     alt: "Black Kids",

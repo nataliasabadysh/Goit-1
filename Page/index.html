@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+
+    <meta property="og:local" content="ru_RU" />
+    <meta property="og:type" content="article" />
+    <meta property="og:desription" content=" VEAN тату шрифты онлайн для всех" />
+    <meta property="og:title" content="Vean шрифты" />
+    <meta property="og:url" content="https://freedosss.github.io/Goit/Page/index.html" />
+    <meta property="og:image" content="https://vean-tattoo.com/media/widgetkit/BanerMastera-9015e32ec24b6dd040928544b85bd8c8.png" />
+    <meta property="og:site_name" content="vean.com" />
+    <title>tattoo shrift</title>
+    <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/soc.css">
   </head>
   <body>
     <!-- SVG спрайт -->
@@ -14,7 +24,7 @@
       xmlns:xlink="http://www.w3.org/1999/xlink"
       style="display: none"
     >
-      <symbol viewBox="0 0 24 24" id="bin-icon">
+      <symbol viewbox="0 0 24 24" id="bin-icon">
         <path
           d="M1.438 16.872l-1.438 7.128 7.127-1.438 12.642-12.64-5.69-5.69-12.641 12.64zm2.271 2.253l-.85-.849 11.141-11.125.849.849-11.14 11.125zm20.291-13.436l-2.817 2.819-5.69-5.691 2.816-2.817 5.691 5.689z"
         />
@@ -22,9 +32,9 @@
     </svg>
     <!-- ///////// -->
 
-    <div class="shrift--wrp">
+    <div class="shrift--wrp" onresize="resize()">
       <!-- 1  Ввод текста -->
-      <div class="section--wrp">
+      <!-- <div class="section--wrp">
         <div class="section input-text">
           <input
             type="text"
@@ -33,8 +43,136 @@
             placeholder="Write your text here..."
           />
         </div>
-      </div>
+      </div> -->
+ 
+      <div class="section--wrp result">
+        <!-- Шарниг кнопки -->
+        <div class="socki">
+            <div class="ui labeled button goodshare" data-type="fb" tabindex="0">
+              <div class="ui facebook button">
+                <i class="icon-facebook"></i>
+              </div>
+            </div>
+           
+            <div class="ui labeled button goodshare" data-type="tw" tabindex="0">
+              <div class="ui twitter button">
+                <i class="icon-twitter"></i>
+              </div>
+            </div>
+  
+  
+            
+            <div class="ui labeled button goodshare" data-type="tg" tabindex="0">
+              <div class="ui telegram button">
+                <i class="icon-telegram"></i> 
+              </div>
+            </div>
+            <div class="ui labeled button goodshare" data-type="vi" tabindex="0">
+              <div class="ui viber button">
+                <i class="icon-viber"></i> 
+              </div>
+            </div>
+            <div class="ui labeled button goodshare" data-type="wa" tabindex="0">
+              <div class="ui whatsapp button">
+                <i class="icon-whatsapp"></i> 
+              </div>
+            </div>
+  
+  
+            </div>
+            <!-- end шаринг кнопок -->
+        <canvas id="canvas" width="1300" height="200"> </canvas>
+        <div class="result--box clearfix">
+          <!-- Повторный ввод текста -->
+          <div class="corect-text">
+            <div class="section--wrp input">
+            <p class="title"><span class="title--img"></span><span>Introduced text</span></p>
+            <div class="write-box">
+              <input
+                type="text"
+                class="write"
+                placeholder="Write your text here..."
+                pattern="[A-Za-z]"
+              />
+              <p class="podskazka">* Возможен ввод только латинских символов (A-z) </p>
+              <!-- <button class="refresh">
 
+              </button> -->
+            </div>
+            </div>
+          </div>
+          <!-- Выбора размера -->
+          <div class="corect-text size">
+              <div class="section--wrp sizebefore">
+            <p class="title"> <span class="title--img"></span><span> Font size</span></p>
+            <div class="write-box ">
+              <p>
+                <button data-size="10"></button>
+                Minimum
+              </p>
+
+              <p>
+                <button data-size="20"></button>
+                Tiny
+              </p>
+
+              <p>
+                <button data-size="30"></button>
+                Small
+              </p>
+
+              <p>
+                <button data-size="40"></button>
+                Medium
+              </p>
+
+              <p>
+                <button data-size="50"></button>
+                Big
+              </p>
+
+              <p>
+                <button data-size="60"></button>
+                Giant
+              </p>
+
+              <p>
+                <button data-size="70"></button>
+                Maximum
+              </p>
+              <p>
+                <button data-calc="-10" class="minus"></button>
+                Adverb
+              </p>
+              <p>
+                <button data-calc="10" class="plus"></button>
+                
+              </p>
+            </div>
+            </div>
+            
+          </div>
+       
+          <!-- Два блока выбора по цветам -->
+
+          <div class="corect-text font-color">
+              <div class="section--wrp colorbefore">
+              <p class="title"><span class="title--img"></span><span>Text color</span></p>
+              <div class="write-box colortext">
+               
+              </div>
+              </div>
+          </div>
+          <div class="corect-text font-bg">
+              <p class="title"><span class="title--img"></span><span>Text background</span></p>
+              <div class="write-box colorbg">
+               
+              </div>
+          </div>
+        </div>
+
+        
+      </div>
       <!-- 2 выбор шрифта, рандомный банер, 2-3 столбца, рендер js  -->
       <div class="section box-shrift">
         <div class="main">
@@ -80,86 +218,307 @@
       </div>
 
       <!-- 3 канвас, размер, цвет (color & bg), тень текста  -->
-      <div class="section--wrp result">
-        <canvas id="canvas"> </canvas>
-        <div class="result--box clearfix">
-          <!-- Повторный ввод текста -->
-          <div class="corect-text">
-            <p class="title">Introduced text</p>
-            <div class="write-box">
-              <input
-                type="text"
-                class="write"
-                placeholder="Write your text here..."
-              />
-              <button>
-
-              </button>
-            </div>
-          </div>
-          <!-- Выбора размера -->
-          <div class="corect-text size">
-            <p class="title">Font size</p>
-            <div class="write-box ">
-              <p>
-                <button data-size="10px"></button>
-                Minimum
-              </p>
-
-              <p>
-                <button data-size="20px"></button>
-                Tiny
-              </p>
-
-              <p>
-                <button data-size="30px"></button>
-                Small
-              </p>
-
-              <p>
-                <button data-size="40px"></button>
-                Medium
-              </p>
-
-              <p>
-                <button data-size="50px"></button>
-                Big
-              </p>
-
-              <p>
-                <button data-size="60px"></button>
-                Giant
-              </p>
-
-              <p>
-                <button data-size="70px"></button>
-                Maximum
-              </p>
-              <p>
-                <button data-size="70px"></button>
-                Other
-              </p>
-            </div>
-          </div>
-       
-          <!-- Два блока выбора по цветам -->
-
-          <div class="corect-text font-color">
-              <p class="title">Text color</p>
-              <div class="write-box colortext">
-               
-              </div>
-          </div>
-          <div class="corect-text font-bg">
-              <p class="title">Text background</p>
-              <div class="write-box colorbg">
-               
-              </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
-
+    <div class="font-prew">
+      <span style="font-family: ALIN_KID"> </span>
+      <span style="font-family: BABYCAKE"> </span>
+      <span style="font-family: BoyzRGross"> </span>
+      <span style="font-family: Bloodn Guts"> </span>
+      <span style="font-family: Buka Bird"> </span>
+      <span style="font-family: CUTE_ANIMAL"> </span>
+      <span style="font-family: campkidz by ratticsassin"> </span>
+      <span style="font-family: Candles_"> </span>
+      <span style="font-family: Candy_Pop"> </span>
+      <span style="font-family: Carton_Six"> </span>
+      <span style="font-family: Chunq"> </span>
+      <span style="font-family: Comica BD"> </span>
+      <span style="font-family: Cute Cartoon"> </span>
+      <span style="font-family: DESIB___"> </span>
+      <span style="font-family: Dbbrnms"> </span>
+      <span style="font-family: Delusional"> </span>
+      <span style="font-family: Dynamix"> </span>
+      <span style="font-family: Extra Sales"> </span>
+      <span style="font-family: flintstone"> </span>
+      <span style="font-family: Folia Mix Regular"> </span>
+      <span style="font-family: Fun Smiles"> </span>
+      <span style="font-family: GOOD TIME"> </span>
+      <span style="font-family: Godzilla"> </span>
+      <span style="font-family: GrinchedRegular"> </span>
+      <span style="font-family: GROBOLD"> </span>
+      <span style="font-family: IRONMAN"> </span>
+      <span style="font-family: JUNGJ___"> </span>
+      <span style="font-family: jabjai_heavy"> </span>
+      <span style="font-family: KGMelonheadz"> </span>
+      <span style="font-family: KGShePersisted"> </span>
+      <span style="font-family: Kraash Black"> </span>
+      <span style="font-family: lazy_sunday_shadow"> </span>
+      <span style="font-family: MadScience"> </span>
+      <span style="font-family: Magic Sound"> </span>
+      <span style="font-family: Meatloaf"> </span>
+      <span style="font-family: Minnie"> </span>
+      <span style="font-family: Mushroom"> </span>
+      <span style="font-family: Organic Fridays"> </span>
+      <span style="font-family: Pokemon Hollow"> </span>
+      <span style="font-family: RifficFree-Bold"> </span>
+      <span style="font-family: SNOT____"> </span>
+      <span style="font-family: scoobydoo"> </span>
+      <span style="font-family: sketches font"> </span>
+      <span style="font-family: SpaceOut"> </span>
+      <span style="font-family: spongefont"> </span>
+      <span style="font-family: Squidgy"> </span>
+      <span style="font-family: Tiki Tropic Bold"> </span>
+      <span style="font-family: Timoteo"> </span>
+      <span style="font-family: Woodys"> </span>
+      <span style="font-family: Yahoo"> </span>
+      <span style="font-family: al kisah"> </span>
+      <span style="font-family:  B Prahara TH_Tlsn Tgn_Bold Italic"> </span>
+      <span style="font-family: BABIRG__"> </span>
+      <span style="font-family: BADABB"> </span>
+      <span style="font-family: BADUY"> </span>
+      <span style="font-family: Black Kids"> </span>
+      <span style="font-family: blamblambb_hvy"> </span>
+      <span style="font-family: CantedFX Bold"> </span>
+      <span style="font-family: Cartoonero"> </span>
+      <span style="font-family: ChamsBold"> </span>
+      <span style="font-family: chint___"> </span>
+      <span style="font-family: Comic James"> </span>
+      <span style="font-family: Comic_Andy"> </span>
+      <span style="font-family: DylanComic"> </span>
+      <span style="font-family: fawn"> </span>
+      <span style="font-family: fennrg__"> </span>
+      <span style="font-family: Fishfingers"> </span>
+      <span style="font-family: fullhouse"> </span>
+      <span style="font-family: FunSized"> </span>
+      <span style="font-family: Go Boom"> </span>
+      <span style="font-family: GrilledChicken"> </span>
+      <span style="font-family: Hazelnut Water"> </span>
+      <span style="font-family: indiepimptbs"> </span>
+      <span style="font-family: Jester"> </span>
+      <span style="font-family: KA-BLAMO"> </span>
+      <span style="font-family: KGHAPPY"> </span>
+      <span style="font-family: Ka-Boing"> </span>
+      <span style="font-family: Key Comic"> </span>
+      <span style="font-family: manga_speak"> </span>
+      <span style="font-family: Mf Fine Again"> </span>
+      <span style="font-family: Mf Rusty"> </span>
+      <span style="font-family: Mr Sunshine"> </span>
+      <span style="font-family: NAKED"> </span>
+      <span style="font-family: Olives"> </span>
+      <span style="font-family: Original Woody"> </span>
+      <span style="font-family: punkboy_tbs"> </span>
+      <span style="font-family: Razing"> </span>
+      <span style="font-family: SWINSBRG"> </span>
+      <span style="font-family: Shaka Pow"> </span>
+      <span style="font-family: sing_14l"> </span>
+      <span style="font-family: space punk PG"> </span>
+      <span style="font-family: Stanberry"> </span>
+      <span style="font-family: Suburbana"> </span>
+      <span style="font-family: Summeron"> </span>
+      <span style="font-family: The Ugly Font"> </span>
+      <span style="font-family: Topuz"> </span>
+      <span style="font-family: vinsdojo"> </span>
+      <span style="font-family: YARDSALE"> </span>
+      <span style="font-family: YIKES__"> </span>
+      <span style="font-family: ALBA____"> </span>
+      <span style="font-family: akka"> </span>
+      <span style="font-family: Arista2.0-FatTrial"> </span>
+      <span style="font-family: BILLO___"> </span>
+      <span style="font-family: BSIDE___"> </span>
+      <span style="font-family: BUBBLEBOY2"> </span>
+      <span style="font-family: blocking"> </span>
+      <span style="font-family: Bonus"> </span>
+      <span style="font-family: CATBЩx"> </span>
+      <span style="font-family: CHICK___"> </span>
+      <span style="font-family: CoasterShadow"> </span>
+      <span style="font-family: DELUSION"> </span>
+      <span style="font-family: Disko"> </span>
+      <span style="font-family: EIGHT___"> </span>
+      <span style="font-family: ELVIS___"> </span>
+      <span style="font-family: GOSOUL__"> </span>
+      <span style="font-family: GeT wEt"> </span>
+      <span style="font-family: grease__"> </span>
+      <span style="font-family: Groovy"> </span>
+      <span style="font-family: HENDD___"> </span>
+      <span style="font-family: Jazz_Ball_Bold"> </span>
+      <span style="font-family: KingkФng"> </span>
+      <span style="font-family: Lakmus"> </span>
+      <span style="font-family: logo"> </span>
+      <span style="font-family: Mama Regular"> </span>
+      <span style="font-family: Mignone"> </span>
+      <span style="font-family: gomarice_mini_pop"> </span>
+      <span style="font-family: monica"> </span>
+      <span style="font-family: Neon"> </span>
+      <span style="font-family: NeptunCAT"> </span>
+      <span style="font-family: PEACE___"> </span>
+      <span style="font-family: MaiLe-Pooh-Regular"> </span>
+      <span style="font-family: pooplatter"> </span>
+      <span style="font-family: Prisma"> </span>
+      <span style="font-family: Puppy___"> </span>
+      <span style="font-family: QUEER___"> </span>
+      <span style="font-family: Rakoon_PersonalUse"> </span>
+      <span style="font-family: SMOKE___"> </span>
+      <span style="font-family: SUGAR"> </span>
+      <span style="font-family: Sargoo"> </span>
+      <span style="font-family: Si Brot"> </span>
+      <span style="font-family: Sixties"> </span>
+      <span style="font-family: Sniglet"> </span>
+      <span style="font-family: soda"> </span>
+      <span style="font-family: Splotch-"> </span>
+      <span style="font-family: Tabun"> </span>
+      <span style="font-family: tutano_cc_v2"> </span>
+      <span style="font-family: vinilo"> </span>
+      <span style="font-family: ANEIRIN_"> </span>
+      <span style="font-family: anirm___"> </span>
+      <span style="font-family: Ardagh"> </span>
+      <span style="font-family: BastardaPlain"> </span>
+      <span style="font-family: br______"> </span>
+      <span style="font-family: CABALETT"> </span>
+      <span style="font-family: CELTICHD"> </span>
+      <span style="font-family: carolingia"> </span>
+      <span style="font-family: castiglione"> </span>
+      <span style="font-family: celtic_gaelige"> </span>
+      <span style="font-family: celticmd"> </span>
+      <span style="font-family: Cryv2"> </span>
+      <span style="font-family: Cup and Talon"> </span>
+      <span style="font-family: CzechGotika"> </span>
+      <span style="font-family: DUNGRG__"> </span>
+      <span style="font-family: dahaut__"> </span>
+      <span style="font-family: deroos__"> </span>
+      <span style="font-family: dum1"> </span>
+      <span style="font-family: eltirg__"> </span>
+      <span style="font-family: gaeilge"> </span>
+      <span style="font-family: Holyv2"> </span>
+      <span style="font-family: JMH Moreneta"> </span>
+      <span style="font-family: KingArthur"> </span>
+      <span style="font-family: LLPALADI2"> </span>
+      <span style="font-family: Livingst"> </span>
+      <span style="font-family: Lombardic"> </span>
+      <span style="font-family: MAEL____"> </span>
+      <span style="font-family: martel"> </span>
+      <span style="font-family: MorrisRomanBlack"> </span>
+      <span style="font-family: NARROW"> </span>
+      <span style="font-family: Onciale PhF01"> </span>
+      <span style="font-family: PATRICK"> </span>
+      <span style="font-family: PR Viking"> </span>
+      <span style="font-family: partybusiness"> </span>
+      <span style="font-family: pe______"> </span>
+      <span style="font-family: questra extra st"> </span>
+      <span style="font-family: Rostock Kaligraph"> </span>
+      <span style="font-family: STCHARLE"> </span>
+      <span style="font-family: sable"> </span>
+      <span style="font-family: _____"> </span>
+      <span style="font-family: SC______"> </span>
+      <span style="font-family: st______"> </span>
+      <span style="font-family: stonehen"> </span>
+      <span style="font-family: stonehenge"> </span>
+      <span style="font-family: theshire"> </span>
+      <span style="font-family: UNCIAL__"> </span>
+      <span style="font-family: VAFTHRUD"> </span>
+      <span style="font-family: VIKING-N"> </span>
+      <span style="font-family: xiphos"> </span>
+      <span style="font-family: Zilluncial"> </span>
+      <span style="font-family: agra_axera"> </span>
+      <span style="font-family: AmazDooMRight"> </span>
+      <span style="font-family: Axe"> </span>
+      <span style="font-family: Backstab Personal Use"> </span>
+      <span style="font-family: Backyard_PERSONAL"> </span>
+      <span style="font-family: Bad Boys"> </span>
+      <span style="font-family: MCF_bad_manners_ww"> </span>
+      <span style="font-family: BaltimoreGoth"> </span>
+      <span style="font-family: Blade"> </span>
+      <span style="font-family: Blade 2"> </span>
+      <span style="font-family: BloodOmen"> </span>
+      <span style="font-family: Carbon_Blade_font"> </span>
+      <span style="font-family: Card Shark"> </span>
+      <span style="font-family: Clobot-Personal-Use"> </span>
+      <span style="font-family: DragonForcE"> </span>
+      <span style="font-family: drakon"> </span>
+      <span style="font-family: ENDOR___"> </span>
+      <span style="font-family: eldiablo"> </span>
+      <span style="font-family: Ethelvina_Regular"> </span>
+      <span style="font-family: Exorcista_-Jed_40"> </span>
+      <span style="font-family: FRAKTURI"> </span>
+      <span style="font-family: Gargoyles"> </span>
+      <span style="font-family: Godhong-Personal-Use"> </span>
+      <span style="font-family: Gothickella Free"> </span>
+      <span style="font-family: Hellion"> </span>
+      <span style="font-family: hooked up 101"> </span>
+      <span style="font-family: FTY_IRONHORSE_NCV"> </span>
+      <span style="font-family: kinifed_"> </span>
+      <span style="font-family: MCF_Krechet"> </span>
+      <span style="font-family: LifeCraft_Font"> </span>
+      <span style="font-family: Long_Shot"> </span>
+      <span style="font-family: MORPHEUS"> </span>
+      <span style="font-family: Make Juice"> </span>
+      <span style="font-family: Midnight Moon - PERSONAL USE ONLY"> </span>
+      <span style="font-family: HBM Mixit (personal use only)"> </span>
+      <span style="font-family: Nightmare_Hero_Normal"> </span>
+      <span style="font-family: PaleHorse"> </span>
+      <span style="font-family: Potsdam"> </span>
+      <span style="font-family: puree____2"> </span>
+      <span style="font-family: Quake___"> </span>
+      <span style="font-family: Spykker"> </span>
+      <span style="font-family: squealer"> </span>
+      <span style="font-family: Tolerant"> </span>
+      <span style="font-family: UnrealT"> </span>
+      <span style="font-family: Unrealised"> </span>
+      <span style="font-family: vinque"> </span>
+      <span style="font-family: WARLOCK_"> </span>
+      <span style="font-family: walshes"> </span>
+      <span style="font-family: WishMF"> </span>
+      <span style="font-family: zeddan"> </span>
+      <span style="font-family: Adlery_TRIAL"> </span>
+      <span style="font-family: Artbrush"> </span>
+      <span style="font-family: bakery"> </span>
+      <span style="font-family: bernadette_rough"> </span>
+      <span style="font-family: Billy Ohio"> </span>
+      <span style="font-family: Blacktear Demo"> </span>
+      <span style="font-family: blowbrush"> </span>
+      <span style="font-family: BROWN FOXY - Personal Use Only"> </span>
+      <span style="font-family: Brushstrike trial"> </span>
+      <span style="font-family: California"> </span>
+      <span style="font-family: chocoleta"> </span>
+      <span style="font-family: DK Cinnabar Brush"> </span>
+      <span style="font-family: Dark Roast"> </span>
+      <span style="font-family: Dry Brush"> </span>
+      <span style="font-family: Easycore"> </span>
+      <span style="font-family: edosz"> </span>
+      <span style="font-family: Gloss_And_Bloom"> </span>
+      <span style="font-family: KGLifeisMessy"> </span>
+      <span style="font-family: KeepScrollingDEMO"> </span>
+      <span style="font-family: LEVIBRUSH"> </span>
+      <span style="font-family: LeviReBrushed"> </span>
+      <span style="font-family: Living Colours Personal Use"> </span>
+      <span style="font-family: Lost in Wild"> </span>
+      <span style="font-family: mark_my_words"> </span>
+      <span style="font-family: Mayton"> </span>
+      <span style="font-family: Movie Makers Personal Use"> </span>
+      <span style="font-family: Night_Ride"> </span>
+      <span style="font-family: Nightingale Sample"> </span>
+      <span style="font-family: njnaruto"> </span>
+      <span style="font-family: OSFC-Bristle-Brush-Script-Regular-Demo"> </span>
+      <span style="font-family: October Twilight"> </span>
+      <span style="font-family: olivier_demo"> </span>
+      <span style="font-family: Olympic Branding"> </span>
+      <span style="font-family: PAINP___"> </span>
+      <span style="font-family: Pale Blue Eyes"> </span>
+      <span style="font-family: Portobesto"> </span>
+      <span style="font-family: Rhinos rocks 1"> </span>
+      <span style="font-family: Silver Age Queens"> </span>
+      <span style="font-family: Sketch"> </span>
+      <span style="font-family: Skywalker free demo"> </span>
+      <span style="font-family: Sophia"> </span>
+      <span style="font-family: Sunshine Boulevard Personal Use"> </span>
+      <span style="font-family: Surfing Capital"> </span>
+      <span style="font-family: Sweet Sorrow"> </span>
+      <span style="font-family: The Braggest_Demo"> </span>
+      <span style="font-family: Thinking_of_Betty"> </span>
+      <span style="font-family: valencia sans"> </span>
+      <span style="font-family: Whortle Demo"> </span>
+      <span style="font-family: WildCreaturesSample"> </span>
+      <span style="font-family: Zondas"> </span>
+    </div>
     <!-- png, print, jpg,   -->
     <div class="download"></div>
 
@@ -171,5 +530,7 @@
     <script src="./js/fontsArr/Script_Brush.js"></script>
     <script src="./js/color.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/share.js"></script>
+    <!-- <script src="./js/shrift.js"></script> -->
   </body>
 </html>

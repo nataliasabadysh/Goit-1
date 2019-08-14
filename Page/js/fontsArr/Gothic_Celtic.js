@@ -65,11 +65,11 @@ const GothicCeltic = [
     name: "celticmd"
   },
 
-  {
-    src: "images/Cryv2.png",
-    alt: "Cryv2",
-    name: "Cryv2"
-  },
+  // {
+  //   src: "images/Cryv2.png",
+  //   alt: "Cryv2",
+  //   name: "Cryv2"
+  // },
 
   {
     src: "images/Cup and Talon.png",
@@ -125,11 +125,11 @@ const GothicCeltic = [
     name: "Holyv2"
   },
 
-  {
-    src: "images/JMH Moreneta.png",
-    alt: "JMH Moreneta",
-    name: "JMH Moreneta"
-  },
+  // {
+  //   src: "images/JMH Moreneta.png",
+  //   alt: "JMH Moreneta",
+  //   name: "JMH Moreneta"
+  // },
 
   {
     src: "images/KingArthur.png",
@@ -227,11 +227,11 @@ const GothicCeltic = [
     name: "STCHARLE"
   },
 
-  {
-    src: "images/sable.png",
-    alt: "sable",
-    name: "sable"
-  },
+  // {
+  //   src: "images/sable.png",
+  //   alt: "sable",
+  //   name: "sable"
+  // },
 
   {
     src: "images/SC______.png",
@@ -239,23 +239,23 @@ const GothicCeltic = [
     name: "SC______"
   },
 
-  {
-    src: "images/st______.png",
-    alt: "st______",
-    name: "st______"
-  },
+  // {
+  //   src: "images/st______.png",
+  //   alt: "st______",
+  //   name: "st______"
+  // },
 
-  {
-    src: "images/stonehen.png",
-    alt: "stonehen",
-    name: "stonehen"
-  },
+  // {
+  //   src: "images/stonehen.png",
+  //   alt: "stonehen",
+  //   name: "stonehen"
+  // },
 
-  {
-    src: "images/stonehenge.png",
-    alt: "stonehenge",
-    name: "stonehenge"
-  },
+  // {
+  //   src: "images/stonehenge.png",
+  //   alt: "stonehenge",
+  //   name: "stonehenge"
+  // },
 
   {
     src: "images/theshire.png",
@@ -275,11 +275,11 @@ const GothicCeltic = [
     name: "VAFTHRUD"
   },
 
-  {
-    src: "images/VIKING-N.png",
-    alt: "VIKING-N",
-    name: "VIKING-N"
-  },
+  // {
+  //   src: "images/VIKING-N.png",
+  //   alt: "VIKING-N",
+  //   name: "VIKING-N"
+  // },
 
   {
     src: "images/xiphos.png",

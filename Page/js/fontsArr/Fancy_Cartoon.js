@@ -13,17 +13,17 @@ const FancyCartoon = [
     name: "BABYCAKE"
   },
 
-  {
-  //  src: "fonts/Fancy_Cartoon/BOYZRGRO/en/boyzrgross0.png",
-    src: "images/BoyzRGross.png",
-    alt: "BOYZRGRO",
-    name: "BOYZRGRO"
-  },
+  // {
+  // //  src: "fonts/Fancy_Cartoon/BOYZRGRO/en/boyzrgross0.png",
+  //   src: "images/BoyzRGross.png",
+  //   alt: "BOYZRGRO",
+  //   name: "BOYZRGRO"
+  // },
   {
   //  src: "fonts/Fancy_Cartoon/Bloodn Guts/en/blood_n_guts0.png",
     src: "images/Bloodn Guts.png",
-    alt: "Blood'n Guts",
-    name: "Blood'n Guts"
+    alt: "Bloodn Guts",
+    name: "Bloodn Guts"
   },
   {
   //  src: "fonts/Fancy_Cartoon/Buka Bird/en/buka_bird0.png",
@@ -37,12 +37,12 @@ const FancyCartoon = [
     alt: "CUTE_ANIMAL",
     name: "CUTE_ANIMAL"
   },
-  {
-  //  src: "fonts/Fancy_Cartoon/Campkidz/en/campkid0.png",
-    src: "images/campkidz by ratticsassin.png",
-    alt: "campkidz by ratticsassin",
-    name: "campkidz by ratticsassin"
-  },
+  // {
+  // //  src: "fonts/Fancy_Cartoon/Campkidz/en/campkid0.png",
+  //   src: "images/campkidz by ratticsassin.png",
+  //   alt: "campkidz by ratticsassin",
+  //   name: "campkidz by ratticsassin"
+  // },
   {
     // src: "fonts/Fancy_Cartoon/Candles/en/candles1.png",
     src: "images/Candles_.png",
@@ -97,24 +97,24 @@ const FancyCartoon = [
     alt: "Delusional",
     name: "Delusional"
   },
-  {
-    // src: "fonts/Fancy_Cartoon/Dynamix/en/dynamix0.png",
-    src: "images/Dynamix.png",
-    alt: "Dynamix",
-    name: "Dynamix"
-  },
+  // {
+  //   // src: "fonts/Fancy_Cartoon/Dynamix/en/dynamix0.png",
+  //   src: "images/Dynamix.png",
+  //   alt: "Dynamix",
+  //   name: "Dynamix"
+  // },
   {
   //  src: "fonts/Fancy_Cartoon/Extra Sales/en/extra_sales0.png",
     src: "images/Extra Sales.png",
     alt: "Extra Sales",
     name: "Extra Sales"
   },
-  {
-  //  src: "fonts/Fancy_Cartoon/Flintstone/en/flintstone0.png",
-    src: "images/flintstone.png",
-    alt: "flintstone",
-    name: "flintstone"
-  },
+  // {
+  // //  src: "fonts/Fancy_Cartoon/Flintstone/en/flintstone0.png",
+  //   src: "images/flintstone.png",
+  //   alt: "flintstone",
+  //   name: "flintstone"
+  // },
   {
   //  src: "fonts/Fancy_Cartoon/Folia Mix Regular/en/foliamix0.png",
     src: "images/Folia Mix Regular.png",
@@ -127,12 +127,12 @@ const FancyCartoon = [
     alt: "Fun Smiles",
     name: "Fun Smiles"
   },
-  {
-  //  src: "fonts/Fancy_Cartoon/GOOD TIME/en/good_time0.png",
-    src: "images/GOOD TIME.png",
-    alt: "GOOD TIME",
-    name: "GOOD TIME"
-  },
+  // {
+  // //  src: "fonts/Fancy_Cartoon/GOOD TIME/en/good_time0.png",
+  //   src: "images/GOOD TIME.png",
+  //   alt: "GOOD TIME",
+  //   name: "GOOD TIME"
+  // },
   {
   //  src: "fonts/Fancy_Cartoon/Godzilla/en/godzilla0.png",
     src: "images/Godzilla.png",

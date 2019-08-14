@@ -25,26 +25,26 @@ const FancyGroovy = [
     alt: "BSIDE___",
     name: "BSIDE___"
   },
-  {
-    src: "images/BUBBLEBOY2.png",
-    alt: "BUBBLEBOY2",
-    name: "BUBBLEBOY2"
-  },
+  // {
+  //   src: "images/BUBBLEBOY2.png",
+  //   alt: "BUBBLEBOY2",
+  //   name: "BUBBLEBOY2"
+  // },
   {
     src: "images/blocking.png",
     alt: "blocking",
     name: "blocking"
   },
-  {
-    src: "images/Bonus.png",
-    alt: "Bonus",
-    name: "Bonus"
-  },
-  {
-    src: "images/CAT.png",
-    alt: "CAT",
-    name: "CAT"
-  },
+  // {
+  //   src: "images/Bonus.png",
+  //   alt: "Bonus",
+  //   name: "Bonus"
+  // },
+  // {
+  //   src: "images/CAT.png",
+  //   alt: "CAT",
+  //   name: "CAT"
+  // },
   {
     src: "images/CHICK___.png",
     alt: "CHICK___",
@@ -95,11 +95,11 @@ const FancyGroovy = [
     alt: "Groovy",
     name: "Groovy"
   },
-  {
-    src: "images/HENDD___.png",
-    alt: "HENDD___",
-    name: "HENDD___"
-  },
+  // {
+  //   src: "images/HENDD___.png",
+  //   alt: "HENDD___",
+  //   name: "HENDD___"
+  // },
   {
     src: "images/Jazz_Ball_Bold.png",
     alt: "Jazz_Ball_Bold",
@@ -190,16 +190,16 @@ const FancyGroovy = [
     alt: "SMOKE___",
     name: "SMOKE___"
   },
-  {
-    src: "images/SUGAR.png",
-    alt: "SUGAR",
-    name: "SUGAR"
-  },
-  {
-    src: "images/Sargoo.png",
-    alt: "Sargoo",
-    name: "Sargoo"
-  },
+  // {
+  //   src: "images/SUGAR.png",
+  //   alt: "SUGAR",
+  //   name: "SUGAR"
+  // },
+  // {
+  //   src: "images/Sargoo.png",
+  //   alt: "Sargoo",
+  //   name: "Sargoo"
+  // },
   {
     src: "images/Si Brot.png",
     alt: "Si Brot",

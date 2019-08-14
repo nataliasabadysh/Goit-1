@@ -89,11 +89,11 @@ const GothicModern = [
     name: "DragonForcE"
   },
 
-  {
-    src: "images/drakon.png",
-    alt: "drakon",
-    name: "drakon"
-  },
+  // {
+  //   src: "images/drakon.png",
+  //   alt: "drakon",
+  //   name: "drakon"
+  // },
 
   {
     src: "images/ENDOR___.png",
@@ -113,11 +113,11 @@ const GothicModern = [
     name: "Ethelvina_Regular"
   },
 
-  {
-    src: "images/Exorcista_-Jed_40.png",
-    alt: "Exorcista_-Jed_40",
-    name: "Exorcista_-Jed_40"
-  },
+  // {
+  //   src: "images/Exorcista_-Jed_40.png",
+  //   alt: "Exorcista_-Jed_40",
+  //   name: "Exorcista_-Jed_40"
+  // },
 
   {
     src: "images/FRAKTURI.png",
