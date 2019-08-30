@@ -48,13 +48,14 @@ class Notepad {
      * Принимает: идентификатор заметки
      * Возвращает: ничего
      */
-    for (let i = 0; i < this.notes.length; i += 1) {
-      if (this.notes[i].id === id) {
-        this.notes.splice(i, 1);
-        // return this;
-        break;
-      }
-    }
+    // for (let i = 0; i < this.notes.length; i += 1) {
+    //   if (this.notes[i].id === id) {
+    //     this.notes.splice(i, 1);
+    //     // return this;
+    //     break;
+    //   }
+    // }
+    this.notes.splice(this.notes.indexOf(this.notes.find(e => e.id === id)), 1);
   }
 
   updateNoteContent(id, updatedContent) {
@@ -91,22 +92,17 @@ class Notepad {
      */
     const total = [];
     query = query.toLowerCase();
-    for (let i = 0; i < this.notes.length; i += 1) {
-      const arr = Object.values(this.notes[i]);
-      // Мне показалось что, поиск не работает в нутри строчки, поэтуму тут так как-то получилось, с одной стороны логично))
-      let string = arr.join(" ");
-      string = string.toLowerCase();
-      string = string.split(" ");
-      if (string.includes(query)) {
-        total.push(this.notes[i]);
-      }
-      // console.log(string);
-
-      // if (task.includes(query)) {
-      //   total.push(this.notes[i]);
-      //   console.log(this.notes[i]);
-      // }
-    }
+    for (let i = 0; i < this.notes.length; i += 1)
+      this.notes.forEach(e => {
+        const arr = Object.values(e);
+        // Мне показалось что, поиск не работает в нутри строчки, поэтуму тут так как-то получилось, с одной стороны логично))
+        let string = arr.join(" ");
+        string = string.toLowerCase();
+        string = string.split(" ");
+        if (string.includes(query)) {
+          total.push(e);
+        }
+      });
     return total;
   }
 
@@ -118,13 +114,8 @@ class Notepad {
      * Принимает: приоритет для поиска в свойстве priority заметки
      * Возвращает: новый массив заметок с подходящим приоритетом
      */
-    const pre = [];
-    for (let i = 0; i < this.notes.length; i += 1) {
-      if (this.notes[i].priority === priority) {
-        pre.push(this.notes[i]);
-      }
-    }
-    return pre;
+    // const pre = [] = this.notes.filter( e => e.priority === priority);
+    return this.notes.filter(e => e.priority === priority);
   }
 }
 
@@ -276,10 +267,15 @@ function button(data, name) {
 // Помотрим куда нажали
 function checkClick({ target }) {
   const elemParent = target.closest(".action");
-  if (!elemParent) { return}
+  if (!elemParent) {
+    return;
+  }
   switch (elemParent.dataset.action) {
     case "delete-note":
-      removeListItem(target);
+      removeListItem(target.closest(".note-list__item"));
+      break;
+    case "edit-note":
+      rewrite(target.closest(".note-list__item"));
       break;
     case "increase-priority":
       setpriority(target, 1);
@@ -288,8 +284,6 @@ function checkClick({ target }) {
       setpriority(target, -1);
       break;
   }
-
-  // console.log(elemParent);
 }
 
 // Добавление заметки
@@ -305,24 +299,46 @@ const generateUniqueId = () =>
 
 function saveNote(event) {
   event.preventDefault();
+
   const { target } = event;
 
   if (!target[0].value || !target[1].value) {
     alert("Вы ввели не все данные");
     return;
   }
-  const newNote = {
-    id: generateUniqueId(),
-    title: target[0].value,
-    body: target[1].value,
-    priority: PRIORITY_TYPES.LOW
-  };
 
-  notepad.saveNote(newNote);
-  PARENT.append(createListItem(newNote));
+  if (target.dataset.id) {
+    notepad.updateNoteContent(target.dataset.id, {
+      title: target[0].value,
+      body: target[1].textContent
+    });
+
+    const elemntsParent = document.querySelector(
+      `.note-list__item[data-id="${target.dataset.id}"]`
+    );
+    elemntsParent.querySelector(".note__title").textContent = target[0].value;
+    elemntsParent.querySelector(".note__body").textContent =  target[1].value;
+    form.style.backgroundColor = "";
+    form.removeAttribute("data-id")
+  } else {
+
+    
+    const newNote = {
+      id: generateUniqueId(),
+      title: target[0].value,
+      body: target[1].value,
+      priority: PRIORITY_TYPES.LOW
+    };
+    
+    notepad.saveNote(newNote);
+    PARENT.append(createListItem(newNote));
+  }
+  target[0].value = "";
+  target[1].value = "";
+
 }
 
-// Фильтрация
+// Фильтрация ищет по целдому слову, думал как искать по частам , но туманно
 const inputFilter = document.querySelector(".search-form__input");
 inputFilter.addEventListener("input", fileterNote);
 
@@ -351,17 +367,32 @@ function fileterNote({ target }) {
 
 // Удаление
 function removeListItem(elem) {
-  const listItem = elem.closest(".note-list__item");
+  const listItem = elem;
   notepad.deleteNote(listItem.dataset.id);
   listItem.remove();
 }
 
-// Обновление приоритета 
+// Обновление приоритета
 function setpriority(elem, num) {
   const listItem = elem.closest(".note-list__item");
-  if ( num > 0 && notepad.findNoteById(listItem.dataset.id).priority === 2) { return}
-  if ( num < 0 && notepad.findNoteById(listItem.dataset.id).priority === 0) { return}
-  console.log( notepad.findNoteById(listItem.dataset.id).priority = notepad.findNoteById(listItem.dataset.id).priority + num);
+  if (num > 0 && notepad.findNoteById(listItem.dataset.id).priority === 2) {
+    return;
+  }
+  if (num < 0 && notepad.findNoteById(listItem.dataset.id).priority === 0) {
+    return;
+  }
+  console.log(
+    (notepad.findNoteById(listItem.dataset.id).priority =
+      notepad.findNoteById(listItem.dataset.id).priority + num)
+  );
   PARENT.innerHTML = "";
   renderNoteList(PARENT, notepad.notes);
+}
+
+// Редатирование
+function rewrite(elem) {
+  form.style.backgroundColor = "#00dbff";
+  form.dataset.id = elem.dataset.id;
+  form[0].value = elem.querySelector(".note__title").textContent;
+  form[1].value = elem.querySelector(".note__body").textContent;
 }
