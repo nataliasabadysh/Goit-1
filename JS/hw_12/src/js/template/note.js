@@ -1,4 +1,4 @@
-const template = `{{#each notes}}
+const template = `{{#each items}}
 <li class="note-list__item" data-id="{{id}}">
   <div class="note">
     <div class="note__content">

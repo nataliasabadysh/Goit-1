@@ -31,17 +31,16 @@ class Notepad {
      * Принимает: объект заметки
      * Возвращает: сохраненную заметку
      */
-    // this._notes.push(note);
-    // return note; 
+    this._notes.push(note);
+    // return note;
     return new Promise((res, rej) => {
-      const itemLocal = JSON.parse(localStorage.getItem('notes'));
+      const itemLocal = JSON.parse(localStorage.getItem("notes"));
       itemLocal.push(note);
-      localStorage.removeItem('notes');
-      localStorage.setItem('notes', JSON.stringify(itemLocal));
+      localStorage.removeItem("notes");
+      localStorage.setItem("notes", JSON.stringify(itemLocal));
 
       res(note);
-
-    })
+    });
   }
 
   deleteNote(id) {
@@ -59,6 +58,15 @@ class Notepad {
     //   }
     // }
     this.notes.splice(this.notes.indexOf(this.notes.find(e => e.id === id)), 1);
+    return new Promise((res, rej) => {
+      const arrLocal = JSON.parse(localStorage.getItem("notes"));
+
+      localStorage.removeItem("notes");
+      arrLocal.splice(arrLocal.indexOf(arrLocal.find(e => e.id === id)), 1);
+      localStorage.setItem("notes", JSON.stringify(arrLocal));
+
+      res([]);
+    });
   }
 
   updateNoteContent(id, updatedContent) {
