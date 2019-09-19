@@ -24,8 +24,35 @@
 
 */
 class Goods {
-    constructor( tovar = []) {
-        this._notes = tovar; // массив объектов типа, товар, количество цена за 1 ед
-    }
-}
+  constructor(tovar = []) {
+    this._tovar = tovar; // массив объектов типа, товар, количество цена за 1 ед
+  }
 
+  getGoods() {
+    return this._tovar;
+  }
+
+  saveGoods(name, price, count) {
+    this._tovar.push({
+      id: shortid.generate(),
+      name: name,
+      price: price,
+      count: count
+    });
+  }
+
+  clearGoods() {
+    this._tovar = [];
+  }
+
+  delGoods(id) {
+    this._tovar.slice(
+      this._tovar.indexOf(this._tovar.find(e => e.id === id)),
+      1
+    );
+  }
+
+  changeGoods(id, count) {
+    this._tovar.find(e => e.id === id).count = count;
+  }
+}
