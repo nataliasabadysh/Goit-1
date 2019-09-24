@@ -4,7 +4,7 @@ import MicroModal from 'micromodal';
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css'; 
 export const PARENT = document.querySelector("ul.note-list");
-export const notepad = new Notepad(json);
+export const notepad = new Notepad();
 export const form = document.querySelector("#note-editor-form");
 export const inputFilter = document.querySelector(".search-form__input");
 export const shortid = require('shortid');

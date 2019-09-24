@@ -1,13 +1,12 @@
-import { Promise } from "q";
+// import { Promise } from "q";
 import * as api from "../api";
-
 class Notepad {
   constructor() {
     // Перенеси свойства и методы объекта notepad в конструктор
     this._notes = [];
   }
 
-  get notes() {
+  get() {
     /*
      * Принимает: ничего
      * Возвращает: все заметки, значение свойства notes
@@ -25,7 +24,9 @@ class Notepad {
      * Принимает: идентификатор заметки
      * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
      */
-    return this._notes.find(e => e.id === id);
+    return api.getNotesById(id).then( res => {
+      return res.json();
+    })
   }
 
   saveNote(note) {
@@ -35,16 +36,9 @@ class Notepad {
      * Принимает: объект заметки
      * Возвращает: сохраненную заметку
      */
-    this._notes.push(note);
-    // return note;
-    return new Promise((res, rej) => {
-      const itemLocal = JSON.parse(localStorage.getItem("notes"));
-      itemLocal.push(note);
-      localStorage.removeItem("notes");
-      localStorage.setItem("notes", JSON.stringify(itemLocal));
-
-      res(note);
-    });
+    return api.saveNote(note).then( res => {
+      return res.json();
+    })
   }
 
   deleteNote(id) {

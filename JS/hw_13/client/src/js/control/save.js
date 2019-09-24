@@ -15,12 +15,12 @@ export function saveNote(event) {
 
   notepad
     .saveNote({
-      id: shortid.generate(),
       title: target[0].value,
       body: target[1].value,
       priority: 0
     })
     .then(res => {
+      console.log(res);
       view();
       formClose();
       target[0].value = "";

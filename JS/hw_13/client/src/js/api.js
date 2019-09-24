@@ -1,18 +1,18 @@
-const baseURL = "http://localhost:3300/notes";
+const baseURL = "http://localhost:3030/notes";
 
-function getNotes() {
+export function getNotes() {
   return fetch(baseURL)
     .then(res => res.json())
     .catch(console.log);
 }
 
-function getNotesById(id) {
+export function getNotesById(id) {
   return fetch(baseURL + "/" + id)
     .then(res => res.json())
-    .catch(console.log);
+    .catch(console.warn);
 }
 
-function getNotesById(id) {
+function delNote(id) {
   const option = {
     method: "DELETE"
   };
@@ -21,14 +21,25 @@ function getNotesById(id) {
     .catch(console.log);
 }
 
-function saveNote(note) {
-  const body = note;
-  const option = {
+export function saveNote(note) {
+  const body = JSON.stringify(note);
+  const options = {
     method: "POST",
     body,
     headers: {
-      "Content-Type": "aplication/json"
+      "Content-Type": "application/json"
     }
   };
-  return fetch(baseURL, option).catch(console.log);
+
+  return fetch(baseURL, options)
+    .then(res => res.json())
+    .then(console.log)
+    .catch(console.log);
 }
+
+// saveNote({
+//   title: "111",
+//   body:
+//     "111111",
+//   priority: 1
+// });
