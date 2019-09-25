@@ -48,23 +48,18 @@ class Notepad {
      * Принимает: идентификатор заметки
      * Возвращает: ничего
      */
-    // for (let i = 0; i < this.notes.length; i += 1) {
-    //   if (this.notes[i].id === id) {
-    //     this.notes.splice(i, 1);
-    //     // return this;
-    //     break;
-    //   }
-    // }
-    this.notes.splice(this.notes.indexOf(this.notes.find(e => e.id === id)), 1);
-    return new Promise((res, rej) => {
-      const arrLocal = JSON.parse(localStorage.getItem("notes"));
+ 
+    // this.notes.splice(this.notes.indexOf(this.notes.find(e => e.id === id)), 1);
+    // return new Promise((res, rej) => {
+    //   const arrLocal = JSON.parse(localStorage.getItem("notes"));
 
-      localStorage.removeItem("notes");
-      arrLocal.splice(arrLocal.indexOf(arrLocal.find(e => e.id === id)), 1);
-      localStorage.setItem("notes", JSON.stringify(arrLocal));
+    //   localStorage.removeItem("notes");
+    //   arrLocal.splice(arrLocal.indexOf(arrLocal.find(e => e.id === id)), 1);
+    //   localStorage.setItem("notes", JSON.stringify(arrLocal));
 
-      res([]);
-    });
+    //   res([]);
+    // });
+    return api.delNote(id).then( res => res)
   }
 
   updateNoteContent(id, updatedContent) {

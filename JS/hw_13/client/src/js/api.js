@@ -12,7 +12,7 @@ export function getNotesById(id) {
     .catch(console.warn);
 }
 
-function delNote(id) {
+export function delNote(id) {
   const option = {
     method: "DELETE"
   };
