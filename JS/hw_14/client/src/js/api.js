@@ -1,15 +1,17 @@
 const baseURL = "http://localhost:3030/notes";
+import {notyf} from "./const/const";
+
 
 export function getNotes() {
   return fetch(baseURL)
     .then(res => res.json())
-    .catch(console.log);
+    .catch(rej => { console.log(rej); notyf.error('Ошибка получения данных')});
 }
 
 export function getNotesById(id) {
   return fetch(baseURL + "/" + id)
     .then(res => res.json())
-    .catch(console.warn);
+    .catch(notyf.error('Данные не найдены'));
 }
 
 export function delNote(id) {
@@ -18,7 +20,7 @@ export function delNote(id) {
   };
   return fetch(baseURL + "/" + id, option)
     .then(res => res.json())
-    .catch(console.log);
+    .catch(notyf.error('Заметка не была удалена'));
 }
 
 export function saveNote(note) {
@@ -34,7 +36,7 @@ export function saveNote(note) {
   return fetch(baseURL, options)
     .then(res => res.json())
     .then(console.log)
-    .catch(console.log);
+    .catch(notyf.error('Ошибка сохранения, попробуйте еще'));
 }
 
 // saveNote({
