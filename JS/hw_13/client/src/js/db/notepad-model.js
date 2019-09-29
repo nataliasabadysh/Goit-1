@@ -38,7 +38,7 @@ class Notepad {
      */
     return api.saveNote(note).then( res => {
       return res.json();
-    })
+    }).catch( rej => { return rej })
   }
 
   deleteNote(id) {

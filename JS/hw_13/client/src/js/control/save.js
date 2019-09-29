@@ -19,13 +19,13 @@ export function saveNote(event) {
       body: target[1].value,
       priority: 0
     })
-    .then(res => {
-      console.log(res);
+    .then(data => {
+      // console.log(data);
       view();
       formClose();
       target[0].value = "";
       target[1].value = "";
       return notyf.success(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);
     })
-    .catch(rej => console.log(rej));
+    .catch(console.log);
 }
