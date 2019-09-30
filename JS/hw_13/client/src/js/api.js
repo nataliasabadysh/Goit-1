@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3030/notes";
+const baseURL = "http://localhost:3330/notes";
 
 export function getNotes() {
   return fetch(baseURL)

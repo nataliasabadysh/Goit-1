@@ -1,5 +1,6 @@
 // import { Promise } from "q";
 import * as api from "../api";
+import { view } from "../view/view";
 class Notepad {
   constructor() {
     // Перенеси свойства и методы объекта notepad в конструктор
@@ -37,6 +38,7 @@ class Notepad {
      * Возвращает: сохраненную заметку
      */
     return api.saveNote(note).then( res => {
+      view(res.json())
       return res.json();
     }).catch( rej => { return rej })
   }

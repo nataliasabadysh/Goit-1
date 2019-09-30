@@ -21,7 +21,8 @@ export function saveNote(event) {
     })
     .then(data => {
       console.log(data);
-      view();
+      console.log(data);
+      view([data]);
       formClose();
       target[0].value = "";
       target[1].value = "";

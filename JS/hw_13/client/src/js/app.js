@@ -6,7 +6,7 @@ import {filterNote} from './control/filter';
 import json from '../assets/notes.json';
 import MicroModal from 'micromodal';
 
-// view();
+view();
 
 
 
