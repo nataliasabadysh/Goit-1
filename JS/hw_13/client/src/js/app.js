@@ -7,20 +7,12 @@ import json from '../assets/notes.json';
 import MicroModal from 'micromodal';
 
 // view();
-if (localStorage.getItem('notes')) {
-    view()
-} else {
-    localStorage.setItem('notes', JSON.stringify(json))
-    view();
-}
 
 
 
-// Листенеры думал как вынести их в отдльный фаил, но чет от туда они не видятся 
 PARENT.addEventListener("click", checkClick);
 form.addEventListener("submit", saveNote);
 
-// inputFilter.addEventListener("input", filterNote);
 MicroModal.init();
 newNotesBtn.addEventListener("click", () => MicroModal.show('note-editor-modal') )
 
@@ -34,5 +26,4 @@ export function formClose() {
 export function formShow() {
     MicroModal.show('note-editor-modal');
 }
-// Display an error notification
 

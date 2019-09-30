@@ -33,7 +33,6 @@ export function saveNote(note) {
 
   return fetch(baseURL, options)
     .then(res => res.json())
-    .then(console.log)
     .catch(console.log);
 }
 
