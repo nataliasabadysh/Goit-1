@@ -14,7 +14,6 @@ export function view(arr = []) {
      })
 
    } else {
-     console.log(arr);
     const items = arr
     // console.log(notepad.get());
     const context = Handlebars.compile(template)({ items });

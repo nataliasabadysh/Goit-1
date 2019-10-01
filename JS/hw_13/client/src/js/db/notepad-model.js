@@ -27,7 +27,7 @@ class Notepad {
      */
     return api.getNotesById(id).then( res => {
       return res.json();
-    })
+    }).catch(console.log)
   }
 
   saveNote(note) {
@@ -38,8 +38,7 @@ class Notepad {
      * Возвращает: сохраненную заметку
      */
     return api.saveNote(note).then( res => {
-      view(res.json())
-      return res.json();
+      return res;
     }).catch( rej => { return rej })
   }
 
