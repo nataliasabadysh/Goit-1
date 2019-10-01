@@ -1,60 +1,68 @@
 // import { Promise } from "q";
+import * as api from "../api";
+import { view } from "../view/view";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-
-import * as api from "../api";
 class Notepad {
   constructor() {
     // Перенеси свойства и методы объекта notepad в конструктор
     this._notes = [];
   }
 
-  get() {
+ async get() {
     /*
      * Принимает: ничего
      * Возвращает: все заметки, значение свойства notes
      */
-    return api
-      .getNotes()
-      .then(notes => {
-        this._notes = notes;
-        return this._notes;
-      })
-      .catch(rej => console.log(rej));
+    return await api.getNotes().then(notes => {
+      this._notes = notes;
+      return this._notes;
+    });
   }
 
-  findNoteById(id) {
+  async  findNoteById(id) {
     /*
      * Ищет заметку в массиве notes
      *
      * Принимает: идентификатор заметки
      * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
      */
-    return api.getNotesById(id).then(res => {
-      console.log(res);
+    return await api.getNotesById(id).then( res => {
       return res.json();
-    });
+    }).catch(console.log)
   }
 
-  async saveNote(note) {
-    return await api
-      .saveNote(note)
-      .then(res => {
-        return res.json();
-      })
-      .catch(rej => {
-        return rej;
-      });
+ async saveNote(note) {
+    /*
+     * Сохраняет заметку в массив notes
+     *
+     * Принимает: объект заметки
+     * Возвращает: сохраненную заметку
+     */
+    return await api.saveNote(note).then( res => {
+      return res;
+    }).catch( rej => { return rej })
   }
 
-  async deleteNote(id) {
+ async deleteNote(id) {
     /*
      * Удаляет заметку по идентификатору из массива notes
      *
      * Принимает: идентификатор заметки
      * Возвращает: ничего
      */
-    return await api.delNote(id).then(res => res);
+ 
+    // this.notes.splice(this.notes.indexOf(this.notes.find(e => e.id === id)), 1);
+    // return new Promise((res, rej) => {
+    //   const arrLocal = JSON.parse(localStorage.getItem("notes"));
+
+    //   localStorage.removeItem("notes");
+    //   arrLocal.splice(arrLocal.indexOf(arrLocal.find(e => e.id === id)), 1);
+    //   localStorage.setItem("notes", JSON.stringify(arrLocal));
+
+    //   res([]);
+    // });
+  return await api.delNote(id).then( res => res)
   }
 
   updateNoteContent(id, updatedContent) {

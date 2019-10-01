@@ -1,29 +1,35 @@
-const baseURL = "http://localhost:3030/notes";
-import {notyf} from "./const/const";
+import { notyf } from "./const/const";
 
+const baseURL = "http://localhost:3330/notes";
 
-export function getNotes() {
-  return fetch(baseURL)
+export async function getNotes() {
+  return await fetch(baseURL)
     .then(res => res.json())
-    .catch(rej => { console.log(rej); notyf.error('Ошибка получения данных')});
+    .catch( () => { 
+      notyf.error('Ошибка сервера')
+      console.log});
 }
 
-export function getNotesById(id) {
-  return fetch(baseURL + "/" + id)
+export async function getNotesById(id) {
+  return await fetch(baseURL + "/" + id)
     .then(res => res.json())
-    .catch(notyf.error('Данные не найдены'));
+    .catch( () => { 
+      notyf.error('Ошибка сервера')
+      console.warn});
 }
 
-export function delNote(id) {
+export async function delNote(id) {
   const option = {
     method: "DELETE"
   };
-  return fetch(baseURL + "/" + id, option)
+  return await fetch(baseURL + "/" + id, option)
     .then(res => res.json())
-    .catch(notyf.error('Заметка не была удалена'));
+    .catch( () => { 
+      notyf.error('Ошибка сервера')
+      console.log});
 }
 
-export function saveNote(note) {
+export async function saveNote(note) {
   const body = JSON.stringify(note);
   const options = {
     method: "POST",
@@ -33,11 +39,11 @@ export function saveNote(note) {
     }
   };
 
-
-  return fetch(baseURL, options)
+  return await fetch(baseURL, options)
     .then(res => res.json())
-    .then(console.log)
-    .catch(notyf.error('Ошибка сохранения, попробуйте еще'));
+    .catch( () => { 
+      notyf.error('Ошибка сервера')
+      console.log});
 }
 
 // saveNote({

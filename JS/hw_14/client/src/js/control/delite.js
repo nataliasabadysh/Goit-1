@@ -4,8 +4,9 @@ import { NOTIFICATION_MESSAGES } from "../utils/constants";
 export function removeListItem(elem) {
   const listItem = elem;
   notepad.deleteNote(listItem.dataset.id).then(res => {
-    console.log(res);
-    view();
+    listItem.remove()
+    // document.deleteNote(listItem)
+    // view();
     notyf.success(NOTIFICATION_MESSAGES.NOTE_DELETED_SUCCESS);
   });
 }
