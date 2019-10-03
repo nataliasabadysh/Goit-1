@@ -1,32 +1,41 @@
+const baseURL = "http://localhost:3030/notes";
 import { notyf } from "./const/const";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime/runtime";
 
-const baseURL = "http://localhost:3330/notes";
+
 
 export async function getNotes() {
-  return await fetch(baseURL)
-    .then(res => res.json())
-    .catch( () => { 
-      notyf.error('Ошибка сервера')
-      console.log});
-}
-
-export async function getNotesById(id) {
-  return await fetch(baseURL + "/" + id)
-    .then(res => res.json())
-    .catch( () => { 
-      notyf.error('Ошибка сервера')
-      console.warn});
+  try {
+    const response = await fetch(baseURL);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    notyf.error("Ошибка сервера");
+  }
 }
 
 export async function delNote(id) {
   const option = {
     method: "DELETE"
   };
-  return await fetch(baseURL + "/" + id, option)
-    .then(res => res.json())
-    .catch( () => { 
-      notyf.error('Ошибка сервера')
-      console.log});
+  try {
+    const response = await fetch(baseURL + "/" + id, option);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    notyf.error("Ошибка сервера");
+  }
+}
+export async function getNotesById(id) {
+  try {
+    const res = await fetch(baseURL + "/" + id);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    notyf.error("Ошибка получения данных");
+  }
 }
 
 export async function saveNote(note) {
@@ -39,11 +48,17 @@ export async function saveNote(note) {
     }
   };
 
-  return await fetch(baseURL, options)
-    .then(res => res.json())
-    .catch( () => { 
-      notyf.error('Ошибка сервера')
-      console.log});
+try {
+  const res = await fetch(baseURL, options);
+  const data = await res.json();
+  return data
+} catch (err) {
+  notyf.error('ошибка сохранения');
+}
+  // return fetch(baseURL, options)
+  //   .then(res => res.json())
+  //   .then(console.log)
+  //   .catch(notyf.error("Ошибка сохранения, попробуйте еще"));
 }
 
 // saveNote({

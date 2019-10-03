@@ -1,50 +1,48 @@
 // import { Promise } from "q";
 import * as api from "../api";
 import { view } from "../view/view";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
 class Notepad {
   constructor() {
     // Перенеси свойства и методы объекта notepad в конструктор
     this._notes = [];
   }
 
- async get() {
+  get() {
     /*
      * Принимает: ничего
      * Возвращает: все заметки, значение свойства notes
      */
-    return await api.getNotes().then(notes => {
+    return api.getNotes().then(notes => {
       this._notes = notes;
       return this._notes;
     });
   }
 
-  async  findNoteById(id) {
+  findNoteById(id) {
     /*
      * Ищет заметку в массиве notes
      *
      * Принимает: идентификатор заметки
      * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
      */
-    return await api.getNotesById(id).then( res => {
+    return api.getNotesById(id).then( res => {
       return res.json();
     }).catch(console.log)
   }
 
- async saveNote(note) {
+  saveNote(note) {
     /*
      * Сохраняет заметку в массив notes
      *
      * Принимает: объект заметки
      * Возвращает: сохраненную заметку
      */
-    return await api.saveNote(note).then( res => {
+    return api.saveNote(note).then( res => {
       return res;
     }).catch( rej => { return rej })
   }
 
- async deleteNote(id) {
+  deleteNote(id) {
     /*
      * Удаляет заметку по идентификатору из массива notes
      *
@@ -62,7 +60,7 @@ class Notepad {
 
     //   res([]);
     // });
-  return await api.delNote(id).then( res => res)
+    return api.delNote(id).then( res => res)
   }
 
   updateNoteContent(id, updatedContent) {
