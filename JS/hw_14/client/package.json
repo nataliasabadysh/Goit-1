@@ -36,9 +36,11 @@
     "webpackbar": "^3.1.4"
   },
   "dependencies": {
+    "core-js": "^3.2.1",
     "handlebars": "^4.4.0",
     "micromodal": "^0.4.2",
     "notyf": "^3.0.4",
+    "regenerator-runtime": "^0.13.3",
     "shortid": "^2.2.15"
   }
 }

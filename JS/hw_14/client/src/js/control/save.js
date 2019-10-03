@@ -20,6 +20,7 @@ export function saveNote(event) {
       priority: 0
     })
     .then(data => {
+      console.log(data);
       view([data])
       formClose();
       target[0].value = "";
