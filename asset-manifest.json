@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Goit/React/hw1/static/css/main.c87db0fc.chunk.css",
-    "main.js": "/Goit/React/hw1/static/js/main.b9f4ac31.chunk.js",
-    "main.js.map": "/Goit/React/hw1/static/js/main.b9f4ac31.chunk.js.map",
-    "runtime-main.js": "/Goit/React/hw1/static/js/runtime-main.ce072c39.js",
-    "runtime-main.js.map": "/Goit/React/hw1/static/js/runtime-main.ce072c39.js.map",
-    "static/js/2.f2268752.chunk.js": "/Goit/React/hw1/static/js/2.f2268752.chunk.js",
-    "static/js/2.f2268752.chunk.js.map": "/Goit/React/hw1/static/js/2.f2268752.chunk.js.map",
-    "index.html": "/Goit/React/hw1/index.html",
-    "precache-manifest.c784abfe8d3a6cc1ac4247d3563a33ca.js": "/Goit/React/hw1/precache-manifest.c784abfe8d3a6cc1ac4247d3563a33ca.js",
-    "service-worker.js": "/Goit/React/hw1/service-worker.js",
-    "static/css/main.c87db0fc.chunk.css.map": "/Goit/React/hw1/static/css/main.c87db0fc.chunk.css.map"
+    "main.css": "/Goit/my-app/static/css/main.c87db0fc.chunk.css",
+    "main.js": "/Goit/my-app/static/js/main.b9f4ac31.chunk.js",
+    "main.js.map": "/Goit/my-app/static/js/main.b9f4ac31.chunk.js.map",
+    "runtime-main.js": "/Goit/my-app/static/js/runtime-main.45ae58a7.js",
+    "runtime-main.js.map": "/Goit/my-app/static/js/runtime-main.45ae58a7.js.map",
+    "static/js/2.f2268752.chunk.js": "/Goit/my-app/static/js/2.f2268752.chunk.js",
+    "static/js/2.f2268752.chunk.js.map": "/Goit/my-app/static/js/2.f2268752.chunk.js.map",
+    "index.html": "/Goit/my-app/index.html",
+    "precache-manifest.c281deaf8496c033e3d7c8b3a8f944ee.js": "/Goit/my-app/precache-manifest.c281deaf8496c033e3d7c8b3a8f944ee.js",
+    "service-worker.js": "/Goit/my-app/service-worker.js",
+    "static/css/main.c87db0fc.chunk.css.map": "/Goit/my-app/static/css/main.c87db0fc.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ce072c39.js",
+    "static/js/runtime-main.45ae58a7.js",
     "static/js/2.f2268752.chunk.js",
     "static/css/main.c87db0fc.chunk.css",
     "static/js/main.b9f4ac31.chunk.js"
