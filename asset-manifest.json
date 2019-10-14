@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Goit/my-app/static/css/main.c87db0fc.chunk.css",
-    "main.js": "/Goit/my-app/static/js/main.b9f4ac31.chunk.js",
-    "main.js.map": "/Goit/my-app/static/js/main.b9f4ac31.chunk.js.map",
-    "runtime-main.js": "/Goit/my-app/static/js/runtime-main.45ae58a7.js",
-    "runtime-main.js.map": "/Goit/my-app/static/js/runtime-main.45ae58a7.js.map",
-    "static/js/2.f2268752.chunk.js": "/Goit/my-app/static/js/2.f2268752.chunk.js",
-    "static/js/2.f2268752.chunk.js.map": "/Goit/my-app/static/js/2.f2268752.chunk.js.map",
-    "index.html": "/Goit/my-app/index.html",
-    "precache-manifest.c281deaf8496c033e3d7c8b3a8f944ee.js": "/Goit/my-app/precache-manifest.c281deaf8496c033e3d7c8b3a8f944ee.js",
-    "service-worker.js": "/Goit/my-app/service-worker.js",
-    "static/css/main.c87db0fc.chunk.css.map": "/Goit/my-app/static/css/main.c87db0fc.chunk.css.map"
+    "main.css": "/Goit/static/css/main.c87db0fc.chunk.css",
+    "main.js": "/Goit/static/js/main.b9f4ac31.chunk.js",
+    "main.js.map": "/Goit/static/js/main.b9f4ac31.chunk.js.map",
+    "runtime-main.js": "/Goit/static/js/runtime-main.9272da54.js",
+    "runtime-main.js.map": "/Goit/static/js/runtime-main.9272da54.js.map",
+    "static/js/2.f2268752.chunk.js": "/Goit/static/js/2.f2268752.chunk.js",
+    "static/js/2.f2268752.chunk.js.map": "/Goit/static/js/2.f2268752.chunk.js.map",
+    "index.html": "/Goit/index.html",
+    "precache-manifest.2d637b15991f3d3e9cf3942d3f4c4780.js": "/Goit/precache-manifest.2d637b15991f3d3e9cf3942d3f4c4780.js",
+    "service-worker.js": "/Goit/service-worker.js",
+    "static/css/main.c87db0fc.chunk.css.map": "/Goit/static/css/main.c87db0fc.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.45ae58a7.js",
+    "static/js/runtime-main.9272da54.js",
     "static/js/2.f2268752.chunk.js",
     "static/css/main.c87db0fc.chunk.css",
     "static/js/main.b9f4ac31.chunk.js"
