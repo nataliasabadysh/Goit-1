@@ -1,0 +1,31 @@
+.statsSection {
+  display: inline-block;
+}
+
+.statList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.statList li {
+  padding: 10px;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.percantage,
+.label {
+  display: block;
+  margin: auto;
+}
